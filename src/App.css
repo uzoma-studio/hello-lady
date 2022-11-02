@@ -13,6 +13,8 @@
     --green: #61811D;
     --blueblack: #1D2021;
 
+    --blue-text-shadow: rgba(53, 126, 199, 0.25);
+
     --font-size-xs: 21px;
     --font-size-s: 28px;
     --font-size-m: 30px;
@@ -20,6 +22,12 @@
     --font-size-xl: 36px;
 
     --font-family: "VCR OSD Mono-Regular", monospace;
+
+    --border-radius: 10px;
+
+    /* Secondary Variables */
+
+    --accent-color: var(--blue);
 }
 
 body {
@@ -51,5 +59,38 @@ h5 {
 }
 
 .vcr-text {
-    text-shadow: 0px 4px 4px rgba(53, 126, 199, 0.25);
+    text-shadow: 0px 4px 4px var(--blue-text-shadow);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-size-xl {
+    font-size: var(--font-size-xl)
+}
+
+.font-size-l {
+    font-size: var(--font-size-l)
+}
+
+.font-size-m {
+    font-size: var(--font-size-m)
+}
+
+.font-size-s {
+    font-size: var(--font-size-s)
+}
+
+.font-size-xs {
+    font-size: var(--font-size-xs)
 }

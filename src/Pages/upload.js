@@ -1,8 +1,13 @@
 import React from 'react'
+import AgentId from '../Components/agentId'
 
 const UploadPage = () => {
   return (
-    <div>UploadPage</div>
+    <main className="page-content">
+      {/* Page links component */}
+      <AgentId />
+      {/* Upload button */}
+    </main>
   )
 }
 

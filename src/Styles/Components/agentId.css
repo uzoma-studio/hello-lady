@@ -1,0 +1,66 @@
+.form-control {
+    height: 90vh;
+    justify-content: space-between;
+}
+
+form {
+    background-color: var(--white);
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    width: 400px;
+}
+
+form * {
+    color: var(--black);
+    font-weight: normal;
+}
+
+form ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form ul li {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between; /* temporary fix */
+}
+
+form input[type="file"]{
+    display: none;
+}
+
+form label {
+    font-size: var(--font-size-xs);
+}
+
+form input {
+    border: none;
+    border-bottom: 2px solid var(--blueblack);
+    color: var(--grey);
+    font-size: var(--font-size-xs);
+}
+
+form input:focus {
+    outline: none;
+}
+
+form div.flex-row {
+    align-items: flex-end;
+}
+
+form label#file-label {
+    border: 1px var(--black) dashed;
+    border-radius: var(--border-radius);
+    margin: 0 25%;
+    height: 150px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+}
+
+form label#file-label:hover {
+    border-color: var(--accent-color);
+} form label#file-label:hover > span {
+    color: var(--accent-color);
+}
