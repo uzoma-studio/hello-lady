@@ -1,0 +1,17 @@
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --blue: #357EC7;
+    --grey: #414243;
+    --darkblue: #1E272E;
+    --crimson: #721B01;
+    --white: #ffffff;
+    --green: #61811D;
+
+    --font-size-xs: 21px;
+    --font-size-s: 28px;
+    --font-size-m: 30px;
+    --font-size-l: 32px;
+    --font-size-xl: 36px;
+
+    --font-family: "VCR OSD Mono-Regular"
+}
