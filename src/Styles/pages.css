@@ -1,0 +1,36 @@
+/* Component Styles */
+
+button {
+    background: none;
+    outline: 1px var(--white) solid;
+    border-radius: 10px;
+    padding: 2px;
+    width: 200px;
+    height: 50px;
+    color: var(--white);
+    font-size: var(--font-size-l);
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(75%)
+}
+
+.button-accept { background-color: var(--blue); } .button-reject { background-color: var(--crimson); }
+
+/* Page Styles */
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 15%;
+}
+
+.page-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
