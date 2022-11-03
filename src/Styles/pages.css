@@ -15,7 +15,7 @@ button:hover {
     filter: brightness(75%)
 }
 
-.button-accept { background-color: var(--blue); } .button-reject { background-color: var(--crimson); }
+.button-accept { background-color: var(--accent-color); } .button-reject { background-color: var(--crimson); }
 .button-default { background-color: var(--darkblue);}
 
 /* Page Styles */
