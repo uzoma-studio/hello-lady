@@ -94,3 +94,15 @@ h5 {
 .font-size-xs {
     font-size: var(--font-size-xs)
 }
+
+.white-text {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 15px 0;
+}

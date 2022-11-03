@@ -9,11 +9,11 @@ const StartPage = () => {
       <iframe title="An Assignment from Lady Donli" src="https://player.vimeo.com/video/554775452?h=aa2083498c&title=0&byline=0&portrait=0" width="640" height="360" frameBorder="0"></iframe>
       <div className="page-row">
         <Link to="/upload">
-          <button className="button-accept font-size-l">
+          <button className="control-button button-accept font-size-l">
             ACCEPT
           </button>  
         </Link>
-        <button className="button-reject font-size-l">REJECT</button>
+        <button className="control-button button-reject font-size-l">REJECT</button>
       </div>
     </main>
   )

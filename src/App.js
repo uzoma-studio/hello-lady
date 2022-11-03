@@ -1,6 +1,5 @@
 import './App.css';
-import SubmitPage from "./Pages/submit";
-import UploadPage from "./Pages/upload";
+import AgentIdPage from "./Pages/agentID";
 import StartPage from "./Pages/start";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -12,11 +11,7 @@ function App() {
     },
     {
       path: "/upload",
-      element: <UploadPage />,
-    },
-    {
-      path: "/submit",
-      element: <SubmitPage />,
+      element: <AgentIdPage />,
     },
     {
       path: "*",

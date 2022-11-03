@@ -1,22 +1,44 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import '../Styles/Components/agentId.css'
 import badge from '../Images/badge.png'
 import html2canvas from "html2canvas"
+import ShareId from './shareId'
 
 const AgentId = () => {
 
     const [file, setFile] = useState(null)
     const [ idImage, setIdImage ] = useState(null)
+    const [ downloadLinkData, setDownloadLinkData ] = useState(null)
+    
+    const nameRef = useRef(null)
+    const codeNameRef = useRef(null)
+    const placeOfIssueRef = useRef(null)
 
     const handleFileChange = (event) => {
         setFile(URL.createObjectURL(event.target.files[0]))
     }
 
+    const transformInputToUppercase = (...inputRefs) => {
+        inputRefs.forEach(ref => {
+            ref.current.value = ref.current.value.toLocaleUpperCase()
+        });
+    }
+
     const generateImage = async () => {
+
+        // set file name before text transform
+        const filename = `${codeNameRef.current.value} agent ID.jpg`
+
+        transformInputToUppercase(nameRef, codeNameRef, placeOfIssueRef)
+        
         const element = document.getElementById('agent-id')
         const canvas = await html2canvas(element)
-        setIdImage(canvas.toDataURL('image/jpg'))
-        console.log(idImage)
+        const data = canvas.toDataURL('image/jpg')
+        setIdImage(data)
+
+        setDownloadLinkData({ href: data, download: filename })
+
+        URL.revokeObjectURL(file)
     }
 
     return (
@@ -38,15 +60,15 @@ const AgentId = () => {
                     <ul>
                         <li>
                             <label htmlFor="name">Issued To</label>
-                            <input type="text" id="name" name="name" /> 
+                            <input type="text" id="name" name="name" ref={nameRef} /> 
                         </li>
                         <li>
                             <label htmlFor="codename">Codename</label>
-                            <input type="text" id="codename" name="codename" /> 
+                            <input type="text" id="codename" name="codename" ref={codeNameRef} /> 
                         </li>
                         <li>
                             <label htmlFor="place-of-issue">Place of Issue</label>
-                            <input type="text" id="place-of-issue" name="place-of-issue" /> 
+                            <input type="text" id="place-of-issue" name="place-of-issue" ref={placeOfIssueRef} /> 
                         </li>
                     </ul>
                     <div className='flex-row'>
@@ -59,7 +81,7 @@ const AgentId = () => {
                 <button className="button-default font-size-s" onClick={() => generateImage()}>Get Your ID</button>
             </div>
         :
-            <img src={idImage} alt="generated agent id" />
+            <ShareId idImage={idImage} downloadLinkData={downloadLinkData} />
         }
         </>
     )
