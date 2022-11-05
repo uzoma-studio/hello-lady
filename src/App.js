@@ -10,7 +10,7 @@ function App() {
       element: <StartPage />,
     },
     {
-      path: "/upload",
+      path: "/id",
       element: <AgentIdPage />,
     },
     {
