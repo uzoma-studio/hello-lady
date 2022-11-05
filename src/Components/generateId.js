@@ -26,19 +26,23 @@ const AgentId = () => {
 
     const generateImage = async () => {
 
-        // set file name before text transform
-        const filename = `${codeNameRef.current.value} agent ID.jpg`
+        if(!file || !nameRef.current.value || !codeNameRef.current.value || !placeOfIssueRef.current.value){
+            alert('PLEASE FILL IN ALL YOUR DETAILS AGENT')
+        } else {
+            // set file name before text transform
+            const filename = `${codeNameRef.current.value} agent ID.jpg`
 
-        transformInputToUppercase(nameRef, codeNameRef, placeOfIssueRef)
-        
-        const element = document.getElementById('agent-id')
-        const canvas = await html2canvas(element)
-        const data = canvas.toDataURL('image/jpg')
-        setIdImage(data)
+            transformInputToUppercase(nameRef, codeNameRef, placeOfIssueRef)
+            
+            const element = document.getElementById('agent-id')
+            const canvas = await html2canvas(element)
+            const data = canvas.toDataURL('image/jpg')
+            setIdImage(data)
 
-        setDownloadLinkData({ href: data, download: filename })
+            setDownloadLinkData({ href: data, download: filename })
 
-        URL.revokeObjectURL(file)
+            URL.revokeObjectURL(file)
+        }
     }
 
     return (
