@@ -41,6 +41,7 @@ form input {
     color: var(--grey);
     font-size: var(--font-size-xs);
     text-transform: uppercase;
+    background: transparent;
 }
 
 form input:focus {
@@ -76,6 +77,28 @@ form label#file-label img {
     max-height: 100%;
     transform: rotate(-2.5deg);
     box-shadow: 2px 2px 2px rgba(0,0,0,.25)
+}
+
+#bg-selector {
+    padding: 0;
+    margin-right: 20px;
+    transform: translateY(-75%);
+}
+
+#bg-selector li {
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+}
+#bg-selector li:hover {
+    cursor: pointer;
+}
+
+.gradient-1 { background: var(--gradient-1); } .gradient-2 { background: var(--gradient-2); } .gradient-3 { background: var(--gradient-3); }
+.gradient-4 { background: var(--gradient-4); } .gradient-5 { background: var(--gradient-5); }
+
+.active-gradient {
+    border: 2px solid var(--blue);
 }
 
 /* Share ID */
