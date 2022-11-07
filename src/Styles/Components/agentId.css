@@ -38,7 +38,7 @@ form label {
 form input {
     border: none;
     border-bottom: 2px solid var(--blueblack);
-    color: var(--grey);
+    color: var(--white);
     font-size: var(--font-size-xs);
     text-transform: uppercase;
     background: transparent;
@@ -103,9 +103,24 @@ form label#file-label img {
 
 /* Share ID */
 
-.share-id {
-    text-align: right;
+#share-id {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 5%;
+}
+
+#share-id img {
+    height: 100%;
+}
+
+#share-id ol li {
+    color: var(--white)
+}
+
+#social-share-links {
+    padding: 0
+} #social-share-links li {
+    display: inline;
+    margin: 0.5em 0;
 }

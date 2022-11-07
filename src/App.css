@@ -78,6 +78,10 @@ h5 {
     display: flex;
 }
 
+.flex-row.center {
+    align-items: center;
+}
+
 .space-evenly {
     justify-content: space-around !important;
 }
