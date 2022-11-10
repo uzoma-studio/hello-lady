@@ -104,7 +104,11 @@ const AgentId = () => {
                 </div>
             </>
         :
-            <ShareId idImage={idImage} downloadLinkData={downloadLinkData} />
+            <ShareId idImage={idImage} downloadLinkData={downloadLinkData} formDetails={{
+                name: nameRef.current.value,
+                codeName: codeNameRef.current.value,
+                placeOfIssue: placeOfIssueRef.current.value
+            }} />
         }
         </>
     )

@@ -125,3 +125,23 @@ form label#file-label img {
     display: inline;
     margin: 0.5em 0;
 }
+
+#email-form-container {
+    height: 100%;
+    justify-content: space-evenly;
+}
+#email-form {
+    background: none;
+    text-align: center;
+    width: 100%;
+}
+#email-form input {
+    border-bottom: 2px solid var(--white);
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+}
+#email-form-btn {
+    width: 50%;
+    margin-left: 25%;
+}
