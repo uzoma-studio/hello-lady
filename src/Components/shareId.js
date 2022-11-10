@@ -58,19 +58,18 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 </div>
             </div>
         :   
-        <div className="flex-column" id="email-form-container">
-            <form id="email-form" name="agent-details" netlify>
-                <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
-                <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
-                <label htmlFor="email" id="email-label" className="text-center">
-                    <input type="email" id="email" name="email" ref={emailRef} />
-                </label>
-                <input type="hidden" id="name" name="name" value={name} /> 
-                <input type="hidden" id="codename" name="codename" value={codeName} /> 
-                <input type="hidden" id="place-of-issue" name="place-of-issue" value={placeOfIssue} /> 
-            </form>
+        <form className="flex-column" id="email-form" name="agent-details" netlify>
+            <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
+            <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
+            <label htmlFor="email" id="email-label" className="text-center">
+                <input type="email" id="email" name="email" ref={emailRef} />
+            </label>
+            <input type="hidden" id="name" name="name" value={name} /> 
+            <input type="hidden" id="codename" name="codename" value={codeName} /> 
+            <input type="hidden" id="place-of-issue" name="place-of-issue" value={placeOfIssue} /> 
+
             <button type="submit" className="button-default font-size-s email-form-btn" onClick={() => confirmEmail(emailRef.current.value)}>Confirm Email</button>
-        </div>
+        </form>
     }
     </>
   )

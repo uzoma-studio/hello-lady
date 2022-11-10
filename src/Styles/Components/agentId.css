@@ -126,10 +126,6 @@ form label#file-label img {
     margin: 0.5em 0;
 }
 
-#email-form-container {
-    height: 100%;
-    justify-content: space-evenly;
-}
 #email-form {
     background: none;
     text-align: center;
@@ -141,7 +137,6 @@ form label#file-label img {
     width: 100%;
     text-align: center;
 }
-#email-form-btn {
-    width: 50%;
-    margin-left: 25%;
+.email-form-btn {
+    margin-top: 2.5rem;
 }
