@@ -74,14 +74,10 @@ const AgentId = () => {
                     <form id="agent-id" className={`flex-column ${bgGradient}`}>
                         <h3 className="text-center">HELLO LADY AGENT ID</h3>
                         <label htmlFor="file" id="file-label" className="text-center">
-                            { file ?
-                                <img src={file} alt="hello lady uploaded id" />
-                                :
-                                <>
+                            { file ? <img src={file} alt="hello lady uploaded id" /> :
                                     <span style={{fontSize: '14px'}}>+ Upload Photo</span>
-                                    <input type="file" id="file" onChange={(event) => handleFileChange(event)}/>
-                                </>
                             }
+                            <input type="file" id="file" onChange={(event) => handleFileChange(event)}/>
                         </label>
                         <ul>
                             <li>
