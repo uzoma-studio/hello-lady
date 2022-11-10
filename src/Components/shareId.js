@@ -69,7 +69,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 <input type="hidden" id="codename" name="codename" value={codeName} /> 
                 <input type="hidden" id="place-of-issue" name="place-of-issue" value={placeOfIssue} /> 
             </form>
-            <button className="button-default font-size-s email-form-btn" onClick={() => confirmEmail(emailRef.current.value)}>Confirm Email</button>
+            <button type="submit" className="button-default font-size-s email-form-btn" onClick={() => confirmEmail(emailRef.current.value)}>Confirm Email</button>
         </div>
     }
     </>
