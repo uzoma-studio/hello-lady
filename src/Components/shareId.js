@@ -58,7 +58,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 </div>
             </div>
         :   
-        <form className="flex-column" id="email-form" name="agent-details" netlify>
+        <form className="flex-column" id="email-form" name="agent-details" method="POST" netlify>
             <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
             <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
             <label htmlFor="email" id="email-label" className="text-center">
