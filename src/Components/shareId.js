@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-import { NetlifyForm } from 'react-netlify-forms'
 
 const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
@@ -64,21 +63,20 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
                 <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
             </div>
-            <div id="email-form">
-                <NetlifyForm className="email-form" name="Agent Details" method="post">
-                        <p>
-                            <label htmlFor="email" id="email-label" className="text-center">
-                                <input type="email" id="email" name="email" ref={emailRef} />
-                            </label>
-                        </p>
-                        <p><input type="hidden" id="name" name="name" value={name} /></p>
-                        <p><input type="hidden" id="codename" name="codename" value={codeName} /></p> 
-                        <p><input type="hidden" id="place-of-issue" name="place-of-issue" value={placeOfIssue} /></p> 
-                        <p>
-                            <button type="submit" className="button-default font-size-s email-form-btn" onClick={() => confirmEmail(emailRef.current.value)}>Confirm Email</button>
-                        </p>
-                </NetlifyForm>
-            </div>
+            <form id="email-form" name="Agent Details" method="post">
+                <input type="hidden" name="form-name" value="Agent Details" />
+                <p>
+                    <label htmlFor="email" id="email-label" className="text-center">
+                        <input type="email" id="email" name="email" ref={emailRef} />
+                    </label>
+                </p>
+                <input type="hidden" id="name" name="name" value={name} />
+                <input type="hidden" id="codename" name="codename" value={codeName} />
+                <input type="hidden" id="place-of-issue" name="place-of-issue" value={placeOfIssue} />
+                <p>
+                    <button type="submit" className="button-default font-size-s email-form-btn" onClick={() => confirmEmail(emailRef.current.value)}>Confirm Email</button>
+                </p>
+            </form>
         </div>
     }
     </>
