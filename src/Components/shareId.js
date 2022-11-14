@@ -63,7 +63,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
                 <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
             </div>
-            <form id="email-form" name="agent-details" method="POST" data-netlify="true">
+            <form id="email-form" name="agent-details" method="post">
                 <input type="hidden" name="form-name" value="agent-details" />
                 <p>
                     <label htmlFor="email" id="email-label" className="text-center">
