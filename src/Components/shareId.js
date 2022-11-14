@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { NetlifyForm, Honeypot } from 'react-netlify-forms'
+import { NetlifyForm } from 'react-netlify-forms'
 
 const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
