@@ -126,10 +126,10 @@ form label#file-label img {
     margin: 0.5em 0;
 }
 
-#email-form {
-    background: none;
-    text-align: center;
-    width: 100%;
+#email-form form {
+    background: none !important;
+    text-align: center !important;
+    width: 100% !important;
 }
 #email-form input {
     border-bottom: 2px solid var(--white);
