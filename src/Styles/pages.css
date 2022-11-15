@@ -36,3 +36,18 @@ button:hover {
     display: flex;
     justify-content: space-evenly;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .page-content {
+        padding: unset;
+    }
+
+    .page-row {
+        flex-direction: column
+    }
+
+    .buttons a button {
+        margin: 0.5em 0;
+    }
+}
