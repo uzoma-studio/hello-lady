@@ -59,6 +59,10 @@ const AgentId = () => {
         setBgGradient(gradient)
     }
 
+    const capitalize = (word) => {
+        return word[0] + word.slice(1).toLowerCase()
+    } 
+
     return (
         <>
         { !idImage ? 
@@ -105,9 +109,9 @@ const AgentId = () => {
             </>
         :
             <ShareId idImage={idImage} downloadLinkData={downloadLinkData} formDetails={{
-                "name": nameRef.current.value,
-                "codename": codeNameRef.current.value,
-                "place-of-issue": placeOfIssueRef.current.value
+                "name": capitalize(nameRef.current.value),
+                "codename": capitalize(codeNameRef.current.value),
+                "place-of-issue": capitalize(placeOfIssueRef.current.value)
             }} />
         }
         </>
