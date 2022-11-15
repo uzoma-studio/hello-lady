@@ -2,18 +2,27 @@ import React, { useState, useRef } from 'react'
 
 const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
-    const [email, setEmail] = useState(null)
+    const [ email, setEmail ] = useState(null)
     const emailRef = useRef(null)
 
-    const { name, codeName, placeOfIssue } = formDetails
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
 
-    const confirmEmail = (emailAddress) => {
-        if(emailAddress && emailAddress.includes('@')){
-            setEmail(emailAddress)
-            // save form data
-        } else {
-            alert('AGENT PLEASE ENTER A VALID EMAIL')
-        }
+    const handleSubmit = e => {
+        setEmail(emailRef.current.value)
+
+        fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "Agent Details", "email": emailRef.current.value, ...formDetails })
+            })
+            .then(() => console.log('Form uploaded successfully'))
+            .catch(error => alert(error));
+    
+            e.preventDefault();
     }
 
   return (
@@ -63,18 +72,14 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
                 <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
             </div>
-            <form id="email-form" name="Agent Details" method="post">
-                <input type="hidden" name="form-name" value="Agent Details" />
+            <form id="email-form" onSubmit={(event) => handleSubmit(event)}>
                 <p>
                     <label htmlFor="email" id="email-label" className="text-center">
-                        <input type="email" id="email" name="email" ref={emailRef} />
+                        <input type="email" id="email" name="email" ref={emailRef} required />
                     </label>
                 </p>
-                <input type="hidden" id="name" name="name" value={name} />
-                <input type="hidden" id="codename" name="codename" value={codeName} />
-                <input type="hidden" id="place-of-issue" name="place-of-issue" value={placeOfIssue} />
                 <p>
-                    <button type="submit" className="button-default font-size-s email-form-btn" onClick={() => confirmEmail(emailRef.current.value)}>Confirm Email</button>
+                    <button type="submit" className="button-default font-size-s email-form-btn">Confirm Email</button>
                 </p>
             </form>
         </div>

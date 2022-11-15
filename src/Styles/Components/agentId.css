@@ -126,7 +126,7 @@ form label#file-label img {
     margin: 0.5em 0;
 }
 
-#email-form form {
+#email-form {
     background: none !important;
     text-align: center !important;
     width: 100% !important;
