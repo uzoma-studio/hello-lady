@@ -21,8 +21,6 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
             })
             .then(() => console.log('Form uploaded successfully'))
             .catch(error => alert(error));
-
-            console.log(encode({ "form-name": "Agent Details", "email": emailRef.current.value, ...formDetails }))
     
             e.preventDefault();
     }

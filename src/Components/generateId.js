@@ -61,7 +61,14 @@ const AgentId = () => {
 
     const capitalize = (word) => {
         return word[0] + word.slice(1).toLowerCase()
-    } 
+    }
+
+    const uploadedImageStyle = {
+        backgroundImage: `url(${file})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+    }
 
     return (
         <>
@@ -76,11 +83,12 @@ const AgentId = () => {
                 </ul>
                 <div className="form-control flex-column">
                     <form id="agent-id" className={`flex-column ${bgGradient}`}>
-                        <h3 className="text-center">HELLO LADY AGENT ID</h3>
-                        <label htmlFor="file" id="file-label" className="text-center">
-                            { file ? <img src={file} alt="hello lady uploaded id" /> :
+                        <h3 className="text-center">LADY DONLI'S DETECTIVE AGENCY</h3>
+                        <label htmlFor="file" id="file-label" className="text-center" style={uploadedImageStyle}>
+                            {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
                                     <span style={{fontSize: '14px'}}>+ Upload Photo</span>
-                            }
+                            } */}
+                            { !file && <span style={{fontSize: '14px'}}>+ Upload Photo</span> }
                             <input type="file" id="file" onChange={(event) => handleFileChange(event)}/>
                         </label>
                         <ul>
