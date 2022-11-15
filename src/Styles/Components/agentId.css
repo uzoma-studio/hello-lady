@@ -127,9 +127,9 @@ form label#file-label img {
 }
 
 #email-form {
-    background: none;
-    text-align: center;
-    width: 100%;
+    background: none !important;
+    text-align: center !important;
+    width: 100% !important;
 }
 #email-form input {
     border-bottom: 2px solid var(--white);
