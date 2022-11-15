@@ -24,6 +24,7 @@ form ul {
 form ul li {
     margin: 15px 0;
     display: inline-flex;
+    width: 100%
 }
 
 form input[type="file"]{
