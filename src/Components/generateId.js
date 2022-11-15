@@ -7,7 +7,7 @@ import ShareId from './shareId'
 const AgentId = () => {
 
     const [file, setFile] = useState(null)
-    const [ idImage, setIdImage ] = useState(null)
+    const [ idImage, setIdImage ] = useState(null) // the generated image of the ID from html2canvas
     const [ downloadLinkData, setDownloadLinkData ] = useState(null)
     
     const nameRef = useRef(null)
@@ -81,7 +81,7 @@ const AgentId = () => {
                     <li className="gradient-4" onClick={ (e) => setGradient(e, gradient4) }></li>
                     <li className="gradient-5" onClick={ (e) => setGradient(e, gradient5) }></li>
                 </ul>
-                <div className="form-control flex-column">
+                <div className="form-control flex-row flex-column-mobile">
                     <form id="agent-id" className={`flex-column ${bgGradient}`}>
                         <h3 className="text-center">LADY DONLI'S DETECTIVE AGENCY</h3>
                         <label htmlFor="file" id="file-label" className="text-center" style={uploadedImageStyle}>
@@ -93,16 +93,16 @@ const AgentId = () => {
                         </label>
                         <ul>
                             <li>
-                                <label htmlFor="name">Issued To</label>
-                                <input type="text" id="name" name="name" ref={nameRef} /> 
+                                <label htmlFor="name" style={{width: '35%'}}>Issued To</label>
+                                <input type="text" id="name" name="name" ref={nameRef} style={{width: 'calc(65% - var(--form-padding)'}} /> 
                             </li>
                             <li>
-                                <label htmlFor="codename">Codename</label>
-                                <input type="text" id="codename" name="codename" ref={codeNameRef} /> 
+                                <label htmlFor="codename" style={{width: '30%'}}>Codename</label>
+                                <input type="text" id="codename" name="codename" ref={codeNameRef} style={{width: 'calc(70% - var(--form-padding)'}} /> 
                             </li>
                             <li>
-                                <label htmlFor="place-of-issue">Place of Issue</label>
-                                <input type="text" id="place-of-issue" name="place-of-issue" ref={placeOfIssueRef} /> 
+                                <label htmlFor="place-of-issue" style={{width: '50%'}}>Place of Issue</label>
+                                <input type="text" id="place-of-issue" name="place-of-issue" ref={placeOfIssueRef} style={{width: 'calc(50% - var(--form-padding)'}} /> 
                             </li>
                         </ul>
                         <div className='flex-row'>
@@ -112,7 +112,8 @@ const AgentId = () => {
                             <img src={badge} alt="Pan-African Rockstar badge" style={{width: '125px'}} />
                         </div>
                     </form>
-                    <button className="button-default font-size-s" onClick={() => generateImage()}>Get Your ID</button>
+                    <button className="button-default font-size-s" id="get-id-btn"
+                        onClick={() => generateImage()}>Get Your ID</button>
                 </div>
             </>
         :

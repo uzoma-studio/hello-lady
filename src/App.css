@@ -25,6 +25,8 @@
 
     --border-radius: 10px;
 
+    --form-padding: 10px;
+
     /* Secondary Variables */
 
     --accent-color: var(--blue);
