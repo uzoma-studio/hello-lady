@@ -25,17 +25,20 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
             e.preventDefault();
     }
 
+    const shareIdText = <>
+                            <p className="font-size-s white-text vcr-text">Welcome aboard agent</p>
+                            <p className="font-size-s white-text vcr-text">Share your ID to show your affiliation</p>
+                        </>
+
   return (
     <>
     {
         email ?
-            <div className="flex-row center">
+            <div className="flex-row center flex-column-mobile" id="share-id-container">
+                <div className="is-mobile">{shareIdText}</div>
                 <img src={idImage} alt="generated agent id" />
                 <div id="share-id">
-                    <div>
-                        <p className="font-size-s white-text vcr-text">Welcome aboard agent</p>
-                        <p className="font-size-s white-text vcr-text">Share your ID to show your affiliation</p>
-                    </div>
+                    <div className="is-desktop">{shareIdText}</div>
                     <ol>
                         <li>
                             <p className='font-size-xs white-text'>Download your generated ID onto your device {` `}</p>

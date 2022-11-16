@@ -35,7 +35,7 @@ const AgentId = () => {
             transformInputToUppercase(nameRef, codeNameRef, placeOfIssueRef)
             
             const element = document.getElementById('agent-id')
-            const canvas = await html2canvas(element)
+            const canvas = await html2canvas(element, {backgroundColor: null})
             const data = canvas.toDataURL('image/jpg')
             setIdImage(data)
 

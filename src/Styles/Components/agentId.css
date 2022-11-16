@@ -5,7 +5,7 @@
 }
 
 form {
-    background-color: var(--white);
+    background-color: transparent;
     padding: var(--form-padding);
     justify-content: space-between;
     border-radius: var(--border-radius);
@@ -124,8 +124,9 @@ form label#file-label:hover {
     padding: 0
 } #social-share-links li {
     display: inline;
-    margin: 0.5em 0;
-}
+} #social-share-links li a button {
+    margin: 0.25em 0;
+} 
 
 #email-form {
     background: none !important;
@@ -160,9 +161,19 @@ form label#file-label:hover {
         margin-left: unset;
         align-self: unset;
         margin-bottom: unset;
+        margin-top: 2.5rem;
     }
 
-    .form-control.flex-column-mobile {
-        margin-top: -4em;
+    #share-id-container {
+        height: 100%
+    }
+    
+    #share-id-container img {
+        width: 350px;
+    }
+
+    .form-control {
+        justify-content: unset;
+
     }
 }
