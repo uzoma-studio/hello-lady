@@ -50,17 +50,17 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                             <p className='font-size-xs white-text'>Be sure to include an image of your ID when you share on any of these platforms:</p>
                             <ul id="social-share-links">
                                 <li>
-                                    <a href="https://instagram.com" rel="noopener noreferrer">
+                                    <a href="https://instagram.com" rel="noopener noreferrer" target="_blank">
                                         <button className="button-default font-size-s">Share on IG</button>{` `}
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://sayhellolady.com" rel="noopener noreferrer">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://sayhellolady.com" rel="noopener noreferrer" target="_blank">
                                         <button className="button-default font-size-s">Share on FB</button>{` `}
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/intent/tweet?text=Want%20to%20join%20the%20elite%20agency?%20Go%20to%20https%3A//sayhellolady.com" rel="noopener noreferrer">
+                                    <a href="https://twitter.com/intent/tweet?text=Want%20to%20join%20the%20elite%20agency?%20Go%20to%20https%3A//sayhellolady.com" rel="noopener noreferrer" target="_blank">
                                         <button className="button-default font-size-s">Share on Twitter</button>
                                     </a>
                                 </li>
