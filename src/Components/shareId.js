@@ -60,7 +60,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/intent/tweet?text=Want%20to%20join%20the%20elite%20agency?%20Go%20to%20https%3A//sayhellolady.com" rel="noopener noreferrer" target="_blank">
+                                    <a href="https://twitter.com/intent/tweet?text=Want%20to%20join%20the%20elite%20spy%20agency?%20Go%20to%20https%3A//sayhellolady.com" rel="noopener noreferrer" target="_blank">
                                         <button className="button-default font-size-s">Share on Twitter</button>
                                     </a>
                                 </li>
