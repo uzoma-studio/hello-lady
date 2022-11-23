@@ -83,7 +83,7 @@ const AgentId = () => {
                 </ul>
                 <div className="form-control flex-row flex-column-mobile">
                     <form id="agent-id" className={`flex-column ${bgGradient}`}>
-                        <h3 className="text-center">LADY DONLI'S DETECTIVE AGENCY</h3>
+                        <h3 className="text-center form-title">LADY DONLI'S DETECTIVE AGENCY</h3>
                         <label htmlFor="file" id="file-label" className="text-center" style={uploadedImageStyle}>
                             {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
                                     <span style={{fontSize: '14px'}}>+ Upload Photo</span>
@@ -106,7 +106,7 @@ const AgentId = () => {
                             </li>
                         </ul>
                         <div className='flex-row'>
-                            <p>
+                            <p style={{ textAlign: 'left' }}>
                                 This certifies that the information hereon is that of an appointed HELLO LADY SPECIAL AGENT
                             </p>
                             <img src={badge} alt="Pan-African Rockstar badge" style={{width: '125px'}} />

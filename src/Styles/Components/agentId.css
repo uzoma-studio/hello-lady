@@ -143,9 +143,13 @@ form label#file-label:hover {
     margin-top: 2.5rem;
 }
 
+h3.form-title {
+    font-size: var(--font-size-xs);
+}
+
 @media screen and (max-width: 768px) {
-    form {
-        width: 350px;
+    form#agent-id {
+        max-width: 70%;
     }
 
     #bg-selector {
@@ -160,7 +164,6 @@ form label#file-label:hover {
     #get-id-btn {
         margin-left: unset;
         align-self: unset;
-        margin-bottom: unset;
         margin-top: 2.5rem;
     }
 
@@ -174,6 +177,16 @@ form label#file-label:hover {
 
     .form-control {
         justify-content: unset;
+        height: unset;
 
+    }
+
+    h3.form-title {
+        font-size: unset;
+    }
+
+    form input {
+        outline: none;
+        border-radius: 0;
     }
 }
