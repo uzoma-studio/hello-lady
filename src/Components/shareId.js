@@ -1,6 +1,16 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
+
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+      window && (window.innerWidth < 768) && setIsMobile(true)
+    
+    //   return () => {
+    //     second
+    //   }
+    }, [])
 
     const [ email, setEmail ] = useState(null)
     const emailRef = useRef(null)
@@ -25,49 +35,92 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
             e.preventDefault();
     }
 
-    const shareIdText = <>
-                            <p className="white-text vcr-text">Welcome aboard agent</p>
-                            <p className="white-text vcr-text">Share your ID to show your affiliation</p>
-                        </>
+    const [stepCount, setStepCount] = useState(0)
+
+    const Step1 = () => {
+
+        return (
+            <div className="flex-row center flex-column-mobile">
+                <img src={idImage} alt="generated agent id" />
+                <div>
+                    <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p>
+                    <p className="white-text vcr-text font-size-xs">Download your ID onto your device by pressing and holding it and selecting "Add to Photos"</p>
+                </div>
+            </div>
+        )
+    }
+
+    const Step2 = () => {
+        const [platformChoice, setPlatformChoice] = useState(null)
+
+        const platforms = { ig: "IG", twitter: "Twitter", fb: "Facebook"}
+
+        const { ig, twitter, fb } = platforms
+
+        const platformSelected = () => {
+            if(platformChoice === ig){
+                return <div>
+                    {/* video instructions on how to share to IG */}
+                    <a href="instagram://share-story" rel="noopener noreferrer" target="_blank">
+                        <button className="button-default font-size-xs">Share on IG</button>{` `}
+                    </a>
+                </div>
+            } else if(platformChoice === twitter){
+                return <div>
+                    {/* video instructions twitter */}
+                    <a href="https://twitter.com/intent/tweet?text=Want%20to%20join%20the%20elite%20spy%20agency?%20Go%20to%20https%3A//sayhellolady.com" rel="noopener noreferrer" target="_blank">
+                        <button className="button-default font-size-xs">Share on Twitter</button>
+                    </a>
+                </div>
+            } else if(platformChoice === fb){
+                return <div>
+                    {/* video instructions fb */}
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://sayhellolady.com" rel="noopener noreferrer" target="_blank">
+                        <button className="button-default font-size-xs">Share on FB</button>{` `}
+                    </a>
+                </div>
+            }
+        }
+
+        return (
+            <div>
+                <p className='white-text vcr-text font-size-s text-center'>Now that your ID is downloaded you can share it on any platform of your choice</p>
+                <ul className="step2-share-links">
+                    <li className="white-text" onClick={() => setPlatformChoice(ig)}>Share on IG</li>
+                    <li className="white-text" onClick={() => setPlatformChoice(twitter)}>Share on Twitter</li>
+                    <li className="white-text" onClick={() => setPlatformChoice(fb)}>Share on Facebook</li>
+                </ul>
+
+                { platformChoice && platformSelected() }
+                
+            </div>
+        )
+    }
+
+    const Step3 = () => {
+        return (
+            <div>
+                <p className='white-text vcr-text font-size-s text-center'>Don't forget to stream Hello Lady on your fave streaming platform</p>
+                {/* Spotify embed link */}
+                {/* Apple Music embed link */}
+            </div>
+        )
+    }
+
+    const shareSteps = [ <Step1 />, <Step2 />, <Step3 /> ]
 
   return (
     <>
     {
         email ?
-            <div className="flex-row center flex-column-mobile" id="share-id-container">
-                <div className="is-mobile font-size-xs">{shareIdText}</div>
-                <img src={idImage} alt="generated agent id" />
-                <div id="share-id">
-                    <div className="is-desktop font-size-s">{shareIdText}</div>
-                    <ol>
-                        <li>
-                            <p className='font-size-xs white-text'>Download your generated ID onto your device {` `}</p>
-                            <a href={downloadLinkData.href} download={downloadLinkData.download}>
-                                <button className="button-default font-size-s">Download ID</button>
-                            </a>
-                        </li>
-                        <li style={{marginTop: '2em'}}>
-                            <p className='font-size-xs white-text'>Be sure to include an image of your ID when you share on any of these platforms:</p>
-                            <ul id="social-share-links">
-                                <li>
-                                    <a href="https://instagram.com" rel="noopener noreferrer" target="_blank">
-                                        <button className="button-default font-size-s">Share on IG</button>{` `}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://sayhellolady.com" rel="noopener noreferrer" target="_blank">
-                                        <button className="button-default font-size-s">Share on FB</button>{` `}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/intent/tweet?text=Want%20to%20join%20the%20elite%20spy%20agency?%20Go%20to%20https%3A//sayhellolady.com" rel="noopener noreferrer" target="_blank">
-                                        <button className="button-default font-size-s">Share on Twitter</button>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
+            <div id="share-id">
+                { shareSteps[stepCount] }
+                {
+                    stepCount < shareSteps.length - 1 ?
+                        <button onClick={() => {setStepCount(stepCount + 1)}}>Next Step</button>
+                        :
+                        <button onClick={() => {setStepCount(0)}}>Back</button>
+                }
             </div>
         :   
         <div className="flex-column">
