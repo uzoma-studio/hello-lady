@@ -223,4 +223,15 @@ h3.form-title {
         width: unset;
         margin-left: unset;
     }
+
+    .email-form-container {
+        height: 100vh;
+        justify-content: center;
+        width: 100%;
+        padding: 0 !important
+    }
+
+    #email-form {
+        padding: 0
+    }
 }

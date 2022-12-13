@@ -73,7 +73,7 @@ const AgentId = () => {
     return (
         <>
         { !idImage ? 
-            <>
+            <main className='page-content flex-column-mobile'>
                 <ul id="bg-selector">
                     <li className="gradient-1 active-gradient" onClick={ (e) => setGradient(e, gradient1) }></li>
                     <li className="gradient-2" onClick={ (e) => setGradient(e, gradient2) }></li>
@@ -115,7 +115,7 @@ const AgentId = () => {
                     <button className="button-default font-size-s" id="get-id-btn"
                         onClick={() => generateImage()}>Get Your ID</button>
                 </div>
-            </>
+            </main>
         :
             <ShareId idImage={idImage} downloadLinkData={downloadLinkData} formDetails={{
                 "name": capitalize(nameRef.current.value),
