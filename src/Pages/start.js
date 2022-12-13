@@ -3,7 +3,11 @@ import '../Styles/pages.css'
 import '../Styles/Pages/start.css'
 import { Link } from 'react-router-dom';
 
-const StartPage = () => {
+const StartPage = ({ audio }) => {
+
+  const playAudio = () => {
+    audio.play()
+  }
 
   return (
     <main className="page-content flex-column space-evenly">
@@ -18,7 +22,7 @@ const StartPage = () => {
       </div>
       <div className="page-row buttons">
         <Link to="/id">
-          <button className="control-button button-accept font-size-l">
+          <button className="control-button button-accept font-size-l" onClick={() => playAudio()}>
             ACCEPT
           </button>  
         </Link>
@@ -26,7 +30,7 @@ const StartPage = () => {
           <button className="control-button button-reject font-size-l">REJECT</button>
         </Link>
       </div>
-      {/* <span style={{color: 'var(--white)'}}>Clicking accept will begin playing audio</span> */}
+      <span style={{color: 'var(--white)'}}>Clicking accept will begin playing audio</span>
     </main>
   )
 }
