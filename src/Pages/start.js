@@ -4,6 +4,7 @@ import '../Styles/Pages/start.css'
 import { Link } from 'react-router-dom';
 
 const StartPage = () => {
+
   return (
     <main className="page-content flex-column space-evenly">
       <h2 className="vcr-text text-center">AN ASSIGNMENT FROM LADY DONLI...</h2>
@@ -25,6 +26,7 @@ const StartPage = () => {
           <button className="control-button button-reject font-size-l">REJECT</button>
         </Link>
       </div>
+      {/* <span style={{color: 'var(--white)'}}>Clicking accept will begin playing audio</span> */}
     </main>
   )
 }

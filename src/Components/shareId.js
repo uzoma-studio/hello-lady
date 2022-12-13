@@ -40,11 +40,25 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
     const Step1 = () => {
 
         return (
-            <div className="flex-row center flex-column-mobile">
+            <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-between'}}>
+                {isMobile && <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p> }
                 <img src={idImage} alt="generated agent id" />
-                <div>
-                    <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p>
-                    <p className="white-text vcr-text font-size-xs">Download your ID onto your device by pressing and holding it and selecting "Add to Photos"</p>
+                <div className="step-1-text">
+                    {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p> }
+                    <p className="white-text vcr-text font-size-xs">
+                        { isMobile ? 
+                            "Download your ID onto your device by pressing and holding it and selecting 'Add to Photos'"
+                            :
+                            "First, download your ID onto your device"
+                        }
+                    </p>
+                    { !isMobile && 
+                        <a href={downloadLinkData.href} download={downloadLinkData.download}>
+                            <button className="button-default font-size-xs" onClick={() => {setStepCount(stepCount + 1)}}>
+                                Download your ID
+                            </button>
+                        </a>
+                    }
                 </div>
             </div>
         )
@@ -61,9 +75,16 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
             if(platformChoice === ig){
                 return <div>
                     {/* video instructions on how to share to IG */}
-                    <a href="instagram://share-story" rel="noopener noreferrer" target="_blank">
-                        <button className="button-default font-size-xs">Share on IG</button>{` `}
-                    </a>
+                    {
+                        isMobile ?
+                            <a href="instagram://share-story" rel="noopener noreferrer" target="_blank">
+                                <button className="button-default font-size-xs">Share on IG</button>{` `}
+                            </a>
+                            :
+                            <a href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+                                <button className="button-default font-size-xs">Share on IG</button>{` `}
+                            </a>
+                    }
                 </div>
             } else if(platformChoice === twitter){
                 return <div>
@@ -90,8 +111,10 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                     <li className="white-text" onClick={() => setPlatformChoice(twitter)}>Share on Twitter</li>
                     <li className="white-text" onClick={() => setPlatformChoice(fb)}>Share on Facebook</li>
                 </ul>
-
-                { platformChoice && platformSelected() }
+                
+                <div className="text-center">
+                    { platformChoice && platformSelected() }
+                </div>
                 
             </div>
         )
@@ -117,7 +140,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 { shareSteps[stepCount] }
                 {
                     stepCount < shareSteps.length - 1 ?
-                        <button onClick={() => {setStepCount(stepCount + 1)}}>Next Step</button>
+                        <button className="button-default font-size-xs next-step-btn" onClick={() => {setStepCount(stepCount + 1)}}>Next Step</button>
                         :
                         <button onClick={() => {setStepCount(0)}}>Back</button>
                 }
