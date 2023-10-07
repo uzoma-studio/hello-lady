@@ -18,9 +18,27 @@ const AudioControl = ({ audio }) => {
     const audioText = isAudioPlaying ? "Pause" : "Play"
 
     return (
-        <button className="button-default audio-btn" onClick={() => toggleAudio()}>
-            {`${audioText} audio`}
-        </button>
+        <div className='bottomHeader'>
+            <span className="vcr-text text-center " style={{ color: 'var(--white)' }}>LADY DONLI</span>
+            <button className="sound-toggle-button" onClick={() => toggleAudio()}>
+                {isAudioPlaying ? (
+                    <img
+                    src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527965/PAR/giphy_uwda4y.gif"
+                    alt="Unmute"
+                    width="70"
+                    height="70"
+                    />
+                ) : (
+                    <img
+                    src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527706/PAR/sound-Off_eedft4.png"
+                    alt="Mute"
+                    width="70"
+                    height="70"
+                    />
+                )}
+
+            </button>
+        </div>
     )
 }
 

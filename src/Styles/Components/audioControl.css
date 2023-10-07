@@ -1,6 +1,23 @@
 .audio-btn {
-    position: absolute;
-    top: 5px;
     right: 5px;
     font-size: 14px;
+}
+
+.bottomHeader{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 9999;
+}
+
+
+.bottomHeader span {
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+.bottomHeader button {
+    margin-bottom: 30px;
 }
