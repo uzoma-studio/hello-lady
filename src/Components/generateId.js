@@ -110,18 +110,19 @@ const AgentId = () => {
             <div>
                 <Card cursorPointer={false} shineStrength={0.75}
                     style={{ background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)", width: "350px", height: "500px", cursor: "pointer", }} >
-                    <div>
-                        <img src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696672531/PAR/chip_frojlx.png"
-                        className="card-item__chip"
-                        alt="credit card chip"/>
-                        <img src={badge}
-                        className="card-item__logo"
-                        alt="PAR card logo"/>
-                    </div>
                     <div className="formDetails form-control flex-row flex-column-mobile">
-                        <form id="agent-id" >
-                            <div style={{  fontFamily: "Fira Code", color: "white", marginTop:"20px" }}>
-                            <label
+                        <form id="agent-id">
+                            <div>
+                                <img src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696672531/PAR/chip_frojlx.png"
+                                className="card-item__chip"
+                                alt="credit card chip"/>
+                                <img src={badge}
+                                className="card-item__logo"
+                                alt="PAR card logo"/>
+                            </div>
+                                
+                            <div style={{  fontFamily: "Fira Code", color: "white", paddingTop:"100px" }}>
+                                <label
                                 htmlFor="file"
                                 id="file-label"
                                 className="text-center"
@@ -175,25 +176,24 @@ const AgentId = () => {
                                     </ul>
                                 </div>
                             </div>
+
+                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: "flex-end", paddingTop:"10px"}}>
+                                <label style={{ color: "white", bottom: "60px", left: "25px", opacity: 0.5, fontSize: "10px" }}>
+                                certified
+                                </label>
+                                <label style={{ color: "white", right: "25px", opacity: 0.5, fontSize: "14px" }}>
+                                PAR
+                                </label>
+                            </div>
+                            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: "flex-end"}}>
+                                <label style={{ color: "white", left: "25px", opacity: 1, fontSize: "30px", textAlign: "left"}}>
+                                    PAN AFRICAN <br/> ROCKSTAR ID
+                                </label>
+                                <label style={{ color: "white",  right: "25px", opacity: 1, fontSize: "20px", }}>
+                                AGENT
+                                </label>
+                            </div>
                         </form>
-                    </div>
-
-                    <div>
-                        <label style={{ color: "white", position: "absolute", bottom: "60px", left: "25px", opacity: 0.5, }}>
-                        certified
-                        </label>
-                        <label style={{ color: "white", position: "absolute",  bottom: "60px", right: "25px", opacity: 0.5, }}>
-                        PAR
-                        </label>
-                    </div>
-
-                    <div>
-                        <label style={{ color: "white", position: "absolute", bottom: "25px", left: "25px", opacity: 1, fontSize: "30px", }}>
-                            PAN AFRICAN <br/> ROCKSTAR ID
-                        </label>
-                        <label style={{ color: "white", position: "absolute", bottom: "25px", right: "25px", opacity: 1, fontSize: "20px", }}>
-                        AGENT
-                        </label>
                     </div>
                 </Card>
                 <button
