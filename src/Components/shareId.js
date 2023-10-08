@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import "../Styles/Components/agentId.css";
 
 const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
@@ -40,7 +41,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
     const Step1 = () => {
 
         return (
-            <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-between'}}>
+            <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-around'}}>
                 {isMobile && <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p> }
                 <img src={idImage} alt="generated agent id" />
                 <div className="step-1-text">
@@ -104,7 +105,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
         }
 
         return (
-            <div>
+            <div className='sharePadding'>
                 <p className='white-text vcr-text font-size-s text-center'>Now that your ID is downloaded you can share it on any platform of your choice</p>
                 <ul className="step2-share-links">
                     <li className="white-text" onClick={() => setPlatformChoice(ig)}>Share on IG</li>
@@ -122,8 +123,8 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
     const Step3 = () => {
         return (
-            <div>
-                <p className='white-text vcr-text font-size-s text-center'>Don't forget to stream Hello Lady on your fave streaming platform</p>
+            <div className='sharePadding'>
+                <p className='white-text vcr-text font-size-s text-center'>Don't forget to stream PAN AFRICAN ROCKSTAR on your fave streaming platform</p>
                 {/* Spotify embed link */}
                 {/* Apple Music embed link */}
             </div>
@@ -140,13 +141,24 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 { shareSteps[stepCount] }
                 {
                     stepCount < shareSteps.length - 1 ?
-                        <button className="button-default font-size-xs next-step-btn" onClick={() => {setStepCount(stepCount + 1)}}>Next Step</button>
+                        <div className="center-container">
+                            <button
+                                className="blur-button"
+                                id="get-id-btn"
+                                onClick={() => {setStepCount(stepCount + 1)}}>
+                               Next Step
+                            </button>
+                        </div>
+                        
                         :
-                        <button onClick={() => {setStepCount(0)}}>Back</button>
+                        <div className="center-container">
+                        <button className="blur-button"
+                                id="get-id-btn" onClick={() => {setStepCount(0)}}>Back</button>
+                        </div>
                 }
             </div>
         :   
-        <div className="flex-column email-form-container">
+        <div className="ConfirmEmail flex-column email-form-container">
             <div>
                 <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
                 <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
@@ -157,9 +169,14 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                         <input type="email" id="email" name="email" ref={emailRef} required />
                     </label>
                 </p>
-                <p>
-                    <button type="submit" className="button-default font-size-s email-form-btn">Confirm Email</button>
-                </p>
+                <div className="center-container">
+                     <button
+                        className="blur-button"
+                        id="get-id-btn"
+                        type="submit">
+                       Confirm Email
+                    </button>
+                </div>
             </form>
         </div>
     }

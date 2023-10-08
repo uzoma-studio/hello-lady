@@ -114,7 +114,7 @@ h5 {
 }
 
 .white-text {
-    color: white;
+    color: white !important;
 }
 
 ul {

@@ -107,12 +107,12 @@ const AgentId = () => {
             ></li>
         </ul>
 
-          <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center", marginTop: "70px"}}>
+          <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center",}}>
             <div>
                 <form id="agent-id">
                     <Card cursorPointer={false} shineStrength={0.75}
                         style={{ background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)", width: "350px", height: "500px", cursor: "pointer", }} >
-                        <div className="formDetails form-control flex-column flex-column-mobile">
+                        <div  className="formDetails form-control flex-column flex-column-mobile">
                     
                                 <div>
                                     <img src={chipImg}
@@ -179,19 +179,19 @@ const AgentId = () => {
                                     </div>
                                 </div>
 
-                                <div style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: "flex-end", paddingTop:"10px"}}>
-                                    <label style={{ color: "white", opacity: 0.5, fontSize: "10px", paddingLeft: "10px" }}>
+                                <div className="labelDiv" style={{ paddingTop:"10px"}}>
+                                    <label  className="Cardlabeldata1"  style={{ fontSize: "10px", paddingLeft: "10px" }}>
                                     certified
                                     </label>
-                                    <label style={{ color: "white", opacity: 0.5, fontSize: "14px", paddingRight: "10px"  }}>
+                                    <label className="Cardlabeldata1" style={{ fontSize: "14px", paddingRight: "10px"  }}>
                                     PAR
                                     </label>
                                 </div>
-                                <div style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: "flex-end"}}>
-                                    <label style={{ color: "white", opacity: 1, fontSize: "30px", paddingLeft: "10px"}}>
+                                <div className="labelDiv" >
+                                    <label className="Cardlabeldata" style={{ fontSize: "30px", paddingLeft: "10px"}}>
                                         PAN AFRICAN <br/> ROCKSTAR ID
                                     </label>
-                                    <label style={{ color: "white", opacity: 1, fontSize: "20px", paddingRight: "10px"}}>
+                                    <label className="Cardlabeldata" style={{ fontSize: "20px", paddingRight: "10px"}}>
                                     AGENT
                                     </label>
                                 </div>
@@ -199,13 +199,15 @@ const AgentId = () => {
                         </div>
                     </Card>
                 </form>
-                <button
-                    className="button-default font-size-s"
-                    style={{marginTop: "50px"}}
-                    id="get-id-btn"
-                    onClick={() => generateImage()}>
-                    Get Your ID
-                </button>
+                <div className="center-container">
+                     <button
+                        className="blur-button"
+                        id="get-id-btn"
+                        onClick={() => generateImage()}>
+                        Get Your ID
+                    </button>
+                </div>
+               
             </div>
           </div>
 
