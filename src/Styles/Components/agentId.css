@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-form {
+form , .form {
     background-color: transparent;
     padding: var(--form-padding);
     justify-content: space-between;
@@ -334,3 +334,9 @@ h3.form-title {
     padding: 0px 180px 0px 180px;
   }
 
+.formImage {
+    position: absolute;
+    z-index: 100;
+    margin-left: 64px;
+    margin-top: 117px;
+}

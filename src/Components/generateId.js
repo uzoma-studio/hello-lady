@@ -109,7 +109,29 @@ const AgentId = () => {
 
           <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center",}}>
             <div>
+       
                 <form id="agent-id">
+                      <div className="form formImage">
+                        <label
+                          htmlFor="file"
+                          id="file-label"
+                          className="text-center"
+                          style={uploadedImageStyle}
+                        >
+                          {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
+                                              <span style={{fontSize: '14px'}}>+ Upload Photo</span>
+                                      } */}
+                          {!file && (
+                            <span style={{ fontSize: "14px" }}> </span>
+                          )}
+                          <input
+                            type="file"
+                            id="file"
+                            onChange={(event) => handleFileChange(event)}
+                          />
+                        </label>
+                      </div>
+
                     <Card cursorPointer={false} shineStrength={0.75}
                         style={{ background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)", width: "350px", height: "500px", cursor: "pointer", }} >
                         <div  className="formDetails form-control flex-column flex-column-mobile">
@@ -142,7 +164,7 @@ const AgentId = () => {
                                         onChange={(event) => handleFileChange(event)}
                                     />
                                     </label>
-                                    <div>
+                                    <div style={{paddingTop: "10px"}}>
                                         <ul style={{margin: "0px"}}>
                                             <li>
                                                 <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px",  width: "30%"  }}>
