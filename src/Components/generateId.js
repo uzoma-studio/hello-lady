@@ -4,10 +4,7 @@ import badge from "../Images/badge.png";
 import chipImg from "../Images/chip.png";
 import html2canvas from "html2canvas";
 import ShareId from "./shareId";
-import Card from "react-animated-3d-card";
-
 const AgentId = () => {
-  const [showFront, setShowFront] = useState("PAN AFRICAN ROCKSTAR ID");
 
   const [file, setFile] = useState(null);
   const [idImage, setIdImage] = useState(null); // the generated image of the ID from html2canvas
@@ -17,6 +14,7 @@ const AgentId = () => {
   const codeNameRef = useRef(null);
   const placeOfIssueRef = useRef(null);
 
+  
   const handleFileChange = (event) => {
     setFile(URL.createObjectURL(event.target.files[0]));
   };
@@ -45,6 +43,7 @@ const AgentId = () => {
       const canvas = await html2canvas(element, { backgroundColor: null });
       const data = canvas.toDataURL("image/jpg");
       setIdImage(data);
+
 
       setDownloadLinkData({ href: data, download: filename });
 
@@ -109,134 +108,131 @@ const AgentId = () => {
 
           <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center", }}>
             <div>
+       
+                  <form id="agent-id">
+                      <div class="tilting-card-wrapper">
+                        <div class="mouse-position-tracker"></div>
+                        <div class="mouse-position-tracker"></div>
+                        <div class="mouse-position-tracker"></div>
+                        <div class="mouse-position-tracker"></div>
+                        <div style={{height: "10px", width: "10px"}} class="mouse-position-tracker"></div>
+                        <div class="mouse-position-tracker"></div>
+                        <div class="mouse-position-tracker"></div>
+                        <div style={{height: "20%"}} class="mouse-position-tracker"></div>
+                        <div class="mouse-position-tracker"></div>
+                        <div class="tilting-card-body">
+      
+                          <div className={`flex-column ${bgGradient}`} cursorPointer={false} shineStrength={0.75}
+                              style={{borderRadius: "20px", width: "350px", height: "500px", cursor: "pointer", }} >
+                              <div  className="formDetails form-control flex-column flex-column-mobile">
+                          
+                                      <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
+                                          <img src={chipImg}
+                                          className="card-item__chip"
+                                          alt="credit card chip"/>
+                                          <img src={badge}
+                                          className="card-item__logo"
+                                          alt="PAR card logo"/>
+                                      </div>
+                                          
+                                      <div style={{  fontFamily: "Fira Code", color: "white" }}>
+                                        <div>
+                                          <label
+                                          htmlFor="file"
+                                          id="file-label"
+                                          className="text-center"
+                                          style={uploadedImageStyle}
+                                          >
+                                          {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
+                                                              <span style={{fontSize: '14px'}}>+ Upload Photo</span>
+                                                      } */}
+                                          {!file && (
+                                              <span style={{ fontSize: "14px" }}>+ Upload Photo</span>
+                                          )}
+                                          <input
+                                              type="file"
+                                              id="file"
+                                              onChange={(event) => handleFileChange(event)}
+                                          />
+                                          </label>
 
-              <form id="agent-id">
-                <div className="form formImage">
-                  <label
-                    htmlFor="file"
-                    id="file-label"
-                    className="text-center"
-                    style={uploadedImageStyle}
-                  >
-                    {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
-                                              <span style={{fontSize: '14px'}}>+ Upload Photo</span>
-                                      } */}
-                    {!file && (
-                      <span style={{ fontSize: "14px" }}> </span>
-                    )}
-                    <input
-                      type="file"
-                      id="file"
-                      onChange={(event) => handleFileChange(event)}
-                    />
-                  </label>
+                                          </div>
+
+                                          <div style={{paddingTop: "10px"}}>
+                                              <ul style={{margin: "0px"}}>
+                                                  <li>
+                                                      <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px",  width: "30%"  }}>
+                                                          ISSUED TO   
+                                                      </label>
+                                                      <input type="text" 
+                                                      className="formInputs" 
+                                                      id="name" 
+                                                      name="name" 
+                                                      ref={nameRef}
+                                                      style={{ width: "calc(65% - var(--form-padding)" }}/>
+                                                  </li>
+                                                  <li>
+                                                      <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
+                                                          CODENAME
+                                                      </label>
+                                                      <input type="text" 
+                                                      id="codename"
+                                                      name="codename"
+                                                      ref={codeNameRef}
+                                                      className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }}/>
+                                                  </li>
+                                                  <li>
+                                                      <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px",  width: "30%"  }}>
+                                                          PLACE OF ISSUE
+                                                      </label>
+                                                      <input type="text" 
+                                                      id="place-of-issue"
+                                                      name="place-of-issue"
+                                                      ref={placeOfIssueRef}
+                                                      className="formInputs"  style={{ width: "calc(65% - var(--form-padding)" }}/>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+
+                                      <div className="labelDiv" style={{ paddingTop:"10px"}}>
+                                          <label  className="Cardlabeldata1"  style={{ fontSize: "10px", paddingLeft: "10px" }}>
+                                          certified
+                                          </label>
+                                          <label className="Cardlabeldata1" style={{ fontSize: "14px", paddingRight: "10px"  }}>
+                                          PAR
+                                          </label>
+                                      </div>
+                                      <div className="labelDiv" >
+                                          <label className="Cardlabeldata" style={{ fontSize: "30px", paddingLeft: "10px"}}>
+                                              PAN AFRICAN <br/> ROCKSTAR ID
+                                          </label>
+                                          <label className="Cardlabeldata" style={{ fontSize: "20px", paddingRight: "10px"}}>
+                                          AGENT
+                                          </label>
+                                      </div>
+                          
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </form>
+                <div className="center-container">
+                     <button
+                        className="blur-button"
+                        id="get-id-btn"
+                        onClick={() => generateImage()}>
+                        Get Your ID
+                    </button>
                 </div>
-
-                <Card cursorPointer={false} shineStrength={0.75}
-                  style={{ background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)", width: "350px", height: "500px", cursor: "pointer", }} >
-                  <div className="formDetails form-control flex-column flex-column-mobile">
-
-                    <div>
-                      <img src={chipImg}
-                        className="card-item__chip"
-                        alt="credit card chip" />
-                      <img src={badge}
-                        className="card-item__logo"
-                        alt="PAR card logo" />
-                    </div>
-
-                    <div style={{ fontFamily: "Fira Code", color: "white", paddingTop: "100px" }}>
-                      <label
-                        htmlFor="file"
-                        id="file-label"
-                        className="text-center"
-                        style={uploadedImageStyle}
-                      >
-                        {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
-                                                        <span style={{fontSize: '14px'}}>+ Upload Photo</span>
-                                                } */}
-                        {!file && (
-                          <span style={{ fontSize: "14px" }}>+ Upload Photo</span>
-                        )}
-                        <input
-                          type="file"
-                          id="file"
-                          onChange={(event) => handleFileChange(event)}
-                        />
-                      </label>
-                      <div style={{ paddingTop: "10px" }}>
-                        <ul style={{ margin: "0px" }}>
-                          <li>
-                            <label htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
-                              ISSUED TO
-                            </label>
-                            <input type="text"
-                              className="formInputs"
-                              id="name"
-                              name="name"
-                              ref={nameRef}
-                              style={{ width: "calc(65% - var(--form-padding)" }} />
-                          </li>
-                          <li>
-                            <label htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
-                              CODENAME
-                            </label>
-                            <input type="text"
-                              id="codename"
-                              name="codename"
-                              ref={codeNameRef}
-                              className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }} />
-                          </li>
-                          <li>
-                            <label htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
-                              PLACE OF ISSUE
-                            </label>
-                            <input type="text"
-                              id="place-of-issue"
-                              name="place-of-issue"
-                              ref={placeOfIssueRef}
-                              className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }} />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="labelDiv" style={{ paddingTop: "10px" }}>
-                      <label className="Cardlabeldata1" style={{ fontSize: "10px", paddingLeft: "10px" }}>
-                        certified
-                      </label>
-                      <label className="Cardlabeldata1" style={{ fontSize: "14px", paddingRight: "10px" }}>
-                        PAR
-                      </label>
-                    </div>
-                    <div className="labelDiv" >
-                      <label className="Cardlabeldata" style={{ fontSize: "30px", paddingLeft: "10px" }}>
-                        PAN AFRICAN <br /> ROCKSTAR ID
-                      </label>
-                      <label className="Cardlabeldata" style={{ fontSize: "20px", paddingRight: "10px" }}>
-                        AGENT
-                      </label>
-                    </div>
-
-                  </div>
-                </Card>
-              </form>
-              <div className="center-container">
-                <button
-                  className="blur-button"
-                  id="get-id-btn"
-                  onClick={() => generateImage()}>
-                  Get Your ID
-                </button>
-              </div>
-
+               
             </div>
           </div>
 
         </div>
       ) : (
         <ShareId
-          idImage={idImage}
+          idImage={idImage}   
           downloadLinkData={downloadLinkData}
           formDetails={{
             name: capitalize(nameRef.current.value),

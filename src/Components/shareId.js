@@ -1,7 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react'
-import "../Styles/Components/agentId.css";
+import { useNavigate } from 'react-router-dom';
 
 const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
+    const handleRefreshClick = () => {
+        window.location.reload(); // This line refreshes the page
+      };    
+  
 
     const [isMobile, setIsMobile] = useState(false)
 
@@ -44,6 +48,22 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
             <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-around'}}>
                 {isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
                 <img src={idImage} alt="generated agent id" />
+               
+                <div class="tilting-card-wrapper">
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="mouse-position-tracker"></div>
+                    <div class="tilting-card-body">
+                        <img className='downloadImage' src={idImage} alt="generated agent id" />
+                    </div>
+                </div>
+                
                 <div className="step-1-text">
                     {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
                     <p className="white-text vcr-text font-size-xs">
@@ -54,11 +74,18 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                         }
                     </p>
                     { !isMobile && 
+                    <>
                         <a href={downloadLinkData.href} download={downloadLinkData.download}>
                             <button className="button-default font-size-xs" onClick={() => {setStepCount(stepCount + 1)}}>
                                 Download your ID
                             </button>
                         </a>
+                        <button
+                            className="blur-button"
+                            onClick={handleRefreshClick}>
+                            BACK TO ID
+                        </button>
+                      </>
                     }
                 </div>
             </div>

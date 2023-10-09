@@ -7,9 +7,10 @@ const AudioControl = ({ audio }) => {
 
 
     return (
+
         <div className='topHeader'>
-            <img src={badge} alt="Pan-African Rockstar badge" style={{ width: '84px' }} />
-            <div>
+            <img src={badge} alt="Pan-African Rockstar badge" style={{ width: '84px', zIndex: "50" }} />
+            <div style={{ zIndex: "50" }}>
                 <ul>
                     <li><a href='#' className="vcr-text" style={{ color: 'var(--white)' }}>Shop</a></li>
                     <li><a href='#' className="vcr-text" style={{ color: 'var(--white)' }}>Info</a></li>
