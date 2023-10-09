@@ -4,21 +4,21 @@ import { SuperSEO } from "react-super-seo";
 const SEO = () => {
   return (
     <SuperSEO
-        title="Hello Lady"
-        description="Hello Lady by Lady Donli - Join the Elite Agency"
+        title="Pan African Rockstar Club ID"
+        description="Get your ID and join the Pan-African Rockstar Club"
         lang="en"
         openGraph={{
             ogImage: {
                 ogImage: "../../public/Images/hello-lady-bg.jpg",
-                ogImageAlt: "Hello Lady by Lady Donli",
+                ogImageAlt: "Pan African Rockstar Club ID",
                 ogImageType: "image/jpeg",
             },
         }}
         twitter={{
             twitterSummaryCard: {
                 summaryCardImage: "../../public/Images/hello-lady-bg.jpg",
-                summaryCardImageAlt: "Hello Lady by Lady Donli",
-                summaryCardSiteUsername: "Hello Lady by Lady Donli - Join the Elite Agency",
+                summaryCardImageAlt: "Pan African Rockstar Club ID",
+                summaryCardSiteUsername: "Get your ID and join the Pan-African Rockstar Club",
             },
         }}
         />

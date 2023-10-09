@@ -46,7 +46,8 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
         return (
             <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-around'}}>
-                {isMobile && <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p> }
+                {isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
+                {/* <img src={idImage} alt="generated agent id" />  */}
                
                 <div class="tilting-card-wrapper">
                     <div class="mouse-position-tracker"></div>
@@ -62,9 +63,9 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                         <img className='downloadImage' src={idImage} alt="generated agent id" />
                     </div>
                 </div>
-
+                
                 <div className="step-1-text">
-                    {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p> }
+                    {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
                     <p className="white-text vcr-text font-size-xs">
                         { isMobile ? 
                             "Download your ID onto your device by pressing and holding it and selecting 'Add to Photos'"
@@ -116,14 +117,14 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
             } else if(platformChoice === twitter){
                 return <div>
                     {/* video instructions twitter */}
-                    <a href="https://twitter.com/intent/tweet?text=Want%20to%20join%20the%20elite%20spy%20agency?%20Go%20to%20https%3A//sayhellolady.com" rel="noopener noreferrer" target="_blank">
+                    <a href="https://twitter.com/intent/tweet?text=Get%20your%20ID%20and%20join%20the%20Pan%20African%20Rockstar%20Club%3A%20https%3A//panafricanrockstar.club" rel="noopener noreferrer" target="_blank">
                         <button className="button-default font-size-xs">Share on Twitter</button>
                     </a>
                 </div>
             } else if(platformChoice === fb){
                 return <div>
                     {/* video instructions fb */}
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://sayhellolady.com" rel="noopener noreferrer" target="_blank">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://panafricanrockstar.club" rel="noopener noreferrer" target="_blank">
                         <button className="button-default font-size-xs">Share on FB</button>{` `}
                     </a>
                 </div>

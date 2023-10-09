@@ -83,7 +83,7 @@ const AgentId = () => {
       {!idImage ? (
         <div className="page-content flex flex-column-mobile">
 
-        <ul id="bg-selector">
+          <ul id="bg-selector">
             <li
               className="gradient-1 active-gradient"
               onClick={(e) => setGradient(e, gradient1)}
@@ -104,9 +104,9 @@ const AgentId = () => {
               className="gradient-5"
               onClick={(e) => setGradient(e, gradient5)}
             ></li>
-        </ul>
+          </ul>
 
-          <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center",}}>
+          <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center", }}>
             <div>
        
                   <form id="agent-id">
