@@ -6,7 +6,7 @@ import HeaderData from '../Components/headerData';
 const UploadPage = ({ audio }) => {
   return (
     <>
-      {/* Page links component */}
+      {/** Page links component **/}
       <HeaderData />
       <AudioControl audio={audio} />
       <AgentId />
