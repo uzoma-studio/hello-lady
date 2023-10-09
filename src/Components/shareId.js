@@ -42,10 +42,10 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
         return (
             <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-around'}}>
-                {isMobile && <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p> }
+                {isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
                 <img src={idImage} alt="generated agent id" />
                 <div className="step-1-text">
-                    {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome Aboard Agent</p> }
+                    {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
                     <p className="white-text vcr-text font-size-xs">
                         { isMobile ? 
                             "Download your ID onto your device by pressing and holding it and selecting 'Add to Photos'"
