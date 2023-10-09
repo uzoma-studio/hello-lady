@@ -47,7 +47,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
         return (
             <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-around'}}>
                 {isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
-                <img src={idImage} alt="generated agent id" />
+                {/* <img src={idImage} alt="generated agent id" />  */}
                
                 <div class="tilting-card-wrapper">
                     <div class="mouse-position-tracker"></div>
