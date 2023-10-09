@@ -4,6 +4,7 @@
     position: absolute;
     width: 100%;
     padding-top: 7px;
+    top: 0;
 }
 
 .topHeader div ul {
