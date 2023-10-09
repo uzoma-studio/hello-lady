@@ -84,7 +84,7 @@ const AgentId = () => {
       {!idImage ? (
         <div className="page-content flex flex-column-mobile">
 
-        <ul id="bg-selector">
+          <ul id="bg-selector">
             <li
               className="gradient-1 active-gradient"
               onClick={(e) => setGradient(e, gradient1)}
@@ -105,131 +105,131 @@ const AgentId = () => {
               className="gradient-5"
               onClick={(e) => setGradient(e, gradient5)}
             ></li>
-        </ul>
+          </ul>
 
-          <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center",}}>
+          <div className="App" style={{ display: "flex", justifyContent: "center", alignContent: "center", }}>
             <div>
-       
-                <form id="agent-id">
-                      <div className="form formImage">
-                        <label
-                          htmlFor="file"
-                          id="file-label"
-                          className="text-center"
-                          style={uploadedImageStyle}
-                        >
-                          {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
+
+              <form id="agent-id">
+                <div className="form formImage">
+                  <label
+                    htmlFor="file"
+                    id="file-label"
+                    className="text-center"
+                    style={uploadedImageStyle}
+                  >
+                    {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
                                               <span style={{fontSize: '14px'}}>+ Upload Photo</span>
                                       } */}
-                          {!file && (
-                            <span style={{ fontSize: "14px" }}> </span>
-                          )}
-                          <input
-                            type="file"
-                            id="file"
-                            onChange={(event) => handleFileChange(event)}
-                          />
-                        </label>
-                      </div>
+                    {!file && (
+                      <span style={{ fontSize: "14px" }}> </span>
+                    )}
+                    <input
+                      type="file"
+                      id="file"
+                      onChange={(event) => handleFileChange(event)}
+                    />
+                  </label>
+                </div>
 
-                    <Card cursorPointer={false} shineStrength={0.75}
-                        style={{ background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)", width: "350px", height: "500px", cursor: "pointer", }} >
-                        <div  className="formDetails form-control flex-column flex-column-mobile">
-                    
-                                <div>
-                                    <img src={chipImg}
-                                    className="card-item__chip"
-                                    alt="credit card chip"/>
-                                    <img src={badge}
-                                    className="card-item__logo"
-                                    alt="PAR card logo"/>
-                                </div>
-                                    
-                                <div style={{  fontFamily: "Fira Code", color: "white", paddingTop:"100px" }}>
-                                    <label
-                                    htmlFor="file"
-                                    id="file-label"
-                                    className="text-center"
-                                    style={uploadedImageStyle}
-                                    >
-                                    {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
+                <Card cursorPointer={false} shineStrength={0.75}
+                  style={{ background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)", width: "350px", height: "500px", cursor: "pointer", }} >
+                  <div className="formDetails form-control flex-column flex-column-mobile">
+
+                    <div>
+                      <img src={chipImg}
+                        className="card-item__chip"
+                        alt="credit card chip" />
+                      <img src={badge}
+                        className="card-item__logo"
+                        alt="PAR card logo" />
+                    </div>
+
+                    <div style={{ fontFamily: "Fira Code", color: "white", paddingTop: "100px" }}>
+                      <label
+                        htmlFor="file"
+                        id="file-label"
+                        className="text-center"
+                        style={uploadedImageStyle}
+                      >
+                        {/* { file ? <img src={file} alt="lady donli's detective agency uploaded id" /> :
                                                         <span style={{fontSize: '14px'}}>+ Upload Photo</span>
                                                 } */}
-                                    {!file && (
-                                        <span style={{ fontSize: "14px" }}>+ Upload Photo</span>
-                                    )}
-                                    <input
-                                        type="file"
-                                        id="file"
-                                        onChange={(event) => handleFileChange(event)}
-                                    />
-                                    </label>
-                                    <div style={{paddingTop: "10px"}}>
-                                        <ul style={{margin: "0px"}}>
-                                            <li>
-                                                <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px",  width: "30%"  }}>
-                                                    ISSUED TO   
-                                                </label>
-                                                <input type="text" 
-                                                className="formInputs" 
-                                                id="name" 
-                                                name="name" 
-                                                ref={nameRef}
-                                                style={{ width: "calc(65% - var(--form-padding)" }}/>
-                                            </li>
-                                            <li>
-                                                <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
-                                                    CODENAME
-                                                </label>
-                                                <input type="text" 
-                                                id="codename"
-                                                name="codename"
-                                                ref={codeNameRef}
-                                                className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }}/>
-                                            </li>
-                                            <li>
-                                                <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px",  width: "30%"  }}>
-                                                    PLACE OF ISSUE
-                                                </label>
-                                                <input type="text" 
-                                                id="place-of-issue"
-                                                name="place-of-issue"
-                                                ref={placeOfIssueRef}
-                                                className="formInputs"  style={{ width: "calc(65% - var(--form-padding)" }}/>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        {!file && (
+                          <span style={{ fontSize: "14px" }}>+ Upload Photo</span>
+                        )}
+                        <input
+                          type="file"
+                          id="file"
+                          onChange={(event) => handleFileChange(event)}
+                        />
+                      </label>
+                      <div style={{ paddingTop: "10px" }}>
+                        <ul style={{ margin: "0px" }}>
+                          <li>
+                            <label htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
+                              ISSUED TO
+                            </label>
+                            <input type="text"
+                              className="formInputs"
+                              id="name"
+                              name="name"
+                              ref={nameRef}
+                              style={{ width: "calc(65% - var(--form-padding)" }} />
+                          </li>
+                          <li>
+                            <label htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
+                              CODENAME
+                            </label>
+                            <input type="text"
+                              id="codename"
+                              name="codename"
+                              ref={codeNameRef}
+                              className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }} />
+                          </li>
+                          <li>
+                            <label htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
+                              PLACE OF ISSUE
+                            </label>
+                            <input type="text"
+                              id="place-of-issue"
+                              name="place-of-issue"
+                              ref={placeOfIssueRef}
+                              className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }} />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
 
-                                <div className="labelDiv" style={{ paddingTop:"10px"}}>
-                                    <label  className="Cardlabeldata1"  style={{ fontSize: "10px", paddingLeft: "10px" }}>
-                                    certified
-                                    </label>
-                                    <label className="Cardlabeldata1" style={{ fontSize: "14px", paddingRight: "10px"  }}>
-                                    PAR
-                                    </label>
-                                </div>
-                                <div className="labelDiv" >
-                                    <label className="Cardlabeldata" style={{ fontSize: "30px", paddingLeft: "10px"}}>
-                                        PAN AFRICAN <br/> ROCKSTAR ID
-                                    </label>
-                                    <label className="Cardlabeldata" style={{ fontSize: "20px", paddingRight: "10px"}}>
-                                    AGENT
-                                    </label>
-                                </div>
-                    
-                        </div>
-                    </Card>
-                </form>
-                <div className="center-container">
-                     <button
-                        className="blur-button"
-                        id="get-id-btn"
-                        onClick={() => generateImage()}>
-                        Get Your ID
-                    </button>
-                </div>
-               
+                    <div className="labelDiv" style={{ paddingTop: "10px" }}>
+                      <label className="Cardlabeldata1" style={{ fontSize: "10px", paddingLeft: "10px" }}>
+                        certified
+                      </label>
+                      <label className="Cardlabeldata1" style={{ fontSize: "14px", paddingRight: "10px" }}>
+                        PAR
+                      </label>
+                    </div>
+                    <div className="labelDiv" >
+                      <label className="Cardlabeldata" style={{ fontSize: "30px", paddingLeft: "10px" }}>
+                        PAN AFRICAN <br /> ROCKSTAR ID
+                      </label>
+                      <label className="Cardlabeldata" style={{ fontSize: "20px", paddingRight: "10px" }}>
+                        AGENT
+                      </label>
+                    </div>
+
+                  </div>
+                </Card>
+              </form>
+              <div className="center-container">
+                <button
+                  className="blur-button"
+                  id="get-id-btn"
+                  onClick={() => generateImage()}>
+                  Get Your ID
+                </button>
+              </div>
+
             </div>
           </div>
 
