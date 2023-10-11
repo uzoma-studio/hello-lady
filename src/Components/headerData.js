@@ -13,7 +13,6 @@ const AudioControl = ({ audio }) => {
             <div style={{ zIndex: "50" }}>
                 <ul>
                     <li><a href='#' className="vcr-text" style={{ color: 'var(--white)' }}>Shop</a></li>
-                    <li><a href='#' className="vcr-text" style={{ color: 'var(--white)' }}>Info</a></li>
                 </ul>
             </div>
         </div>

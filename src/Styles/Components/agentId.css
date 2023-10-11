@@ -305,11 +305,13 @@ h3.form-title {
     cursor: pointer;
     color: white;
     transition: background-color 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(20px); 
   }
   
   .blur-button:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Transparent background with some opacity */
-    backdrop-filter: blur(20px); /* Apply the blur effect */
+    background-color: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(20px); 
   }
 
   .center-container {
