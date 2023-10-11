@@ -1,11 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
-    const handleRefreshClick = () => {
-        window.location.reload(); // This line refreshes the page
-      };    
-  
 
     const [isMobile, setIsMobile] = useState(false)
 
@@ -46,10 +42,10 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
         return (
             <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-around'}}>
-                {isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
+                {isMobile && <p className='white-text vcr-text font-size-m' style={{marginBottom: "10px" }}>Welcome To The Club</p> }
                 {/* <img src={idImage} alt="generated agent id" />  */}
                
-                <div class="tilting-card-wrapper">
+                <div class="tilting-card-wrapper"  style={{width: "300px", height: "450px"}}>
                     <div class="mouse-position-tracker"></div>
                     <div class="mouse-position-tracker"></div>
                     <div class="mouse-position-tracker"></div>
@@ -66,27 +62,31 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 
                 <div className="step-1-text">
                     {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
-                    <p className="white-text vcr-text font-size-xs">
-                        { isMobile ? 
-                            "Download your ID onto your device by pressing and holding it and selecting 'Add to Photos'"
-                            :
-                            "First, download your ID onto your device"
-                        }
+                    { isMobile ? 
+                    <p className="white-text vcr-text font-size-xs" style={{fontSize: "16px", paddingLeft: "10px", paddingRight: "10px", marginTop: "0px"}}>
+                        Download your ID onto your device using the download button or save by long pressing and then 'Add to Photos'
                     </p>
-                    { !isMobile && 
+                      :
+                    <p className="white-text vcr-text font-size-xs">
+                        First, download your ID onto your device
+                    </p>
+                    }
+                    
                     <>
-                        <a href={downloadLinkData.href} download={downloadLinkData.download}>
-                            <button className="button-default font-size-xs" onClick={() => {setStepCount(stepCount + 1)}}>
+                        <a style={{paddingRight: "10px" }} href={downloadLinkData.href} download={downloadLinkData.download}>
+                            <button className="button-default" style={{fontSize: "14px" }} onClick={() => {setStepCount(stepCount + 1)}}>
                                 Download your ID
                             </button>
                         </a>
-                        <button
-                            className="blur-button"
-                            onClick={handleRefreshClick}>
-                            BACK TO ID
-                        </button>
+                        <Link to="/">
+                            <button
+                                style={{fontSize: "14px" }}
+                                className="blur-button">
+                                BACK TO ID
+                            </button>
+                        </Link>
                       </>
-                    }
+                    
                 </div>
             </div>
         )

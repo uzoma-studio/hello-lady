@@ -9,6 +9,7 @@ const AgentId = () => {
   const [file, setFile] = useState(null);
   const [idImage, setIdImage] = useState(null); // the generated image of the ID from html2canvas
   const [downloadLinkData, setDownloadLinkData] = useState(null);
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
 
   const nameRef = useRef(null);
   const codeNameRef = useRef(null);
@@ -34,6 +35,9 @@ const AgentId = () => {
     ) {
       alert("PLEASE FILL IN ALL YOUR DETAILS AGENT");
     } else {
+
+      setButtonDisabled(true);
+
       // set file name before text transform
       const filename = `${codeNameRef.current.value} agent ID.jpg`;
 
@@ -48,6 +52,8 @@ const AgentId = () => {
       setDownloadLinkData({ href: data, download: filename });
 
       URL.revokeObjectURL(file);
+
+      setButtonDisabled(false);
     }
   };
 
@@ -221,7 +227,8 @@ const AgentId = () => {
                      <button
                         className="blur-button"
                         id="get-id-btn"
-                        onClick={() => generateImage()}>
+                        onClick={() => generateImage()}
+                        disabled={isButtonDisabled}> 
                         Get Your ID
                     </button>
                 </div>
