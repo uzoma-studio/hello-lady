@@ -154,6 +154,11 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 <p className='white-text vcr-text font-size-s text-center'>Don't forget to stream PAN AFRICAN ROCKSTAR on your fave streaming platform</p>
                 {/* Spotify embed link */}
                 {/* Apple Music embed link */}
+                <ul className="step2-share-links">
+                    <li><a  className="white-text" target="_blank" href="https://open.spotify.com/album/2kA7NTDqESZM0B7COf3cfh?si=Hwn5QwLVT3mNMlJF4cTDzg">Listen on Spotify</a></li>
+                    <li><a  className="white-text" target="_blank" href="https://music.apple.com/ng/album/pan-african-rockstar/1698225328">Listen on Apple Music</a></li>
+                </ul>
+                
             </div>
         )
     }
