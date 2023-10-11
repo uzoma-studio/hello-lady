@@ -40,6 +40,7 @@
   .centered-image {
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px; /* Add margin as needed */

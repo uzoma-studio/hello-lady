@@ -72,8 +72,13 @@ const StartPage = ({ audio }) => {
 
       <div className="centered-image">
          <Link to="/id">
-          <img src={badge} alt="Pan-African Rockstar badge" onClick={() => playAudio()} style={{width: '208px'}} />
-        </Link>
+          <img src={badge} alt="Pan-African Rockstar badge" onClick={() => playAudio()} style={{width: '208px'}} /><br/>
+         </Link>
+         <Link to="/id">
+            <button onClick={() => playAudio()} className="blur-button"> 
+                Get Your ID
+            </button>
+          </Link>
       </div>
       <div className="page-row buttons">
         {/* <Link to="/id">
@@ -87,9 +92,6 @@ const StartPage = ({ audio }) => {
         
       </div>
 
-        <Link to="/id">
-        <span className="vcr-text text-center bottom-data" onClick={() => playAudio()} style={{ color: 'var(--white)' }}>GET YOUR  ID</span>
-        </Link>
     </main>
   );
 };
