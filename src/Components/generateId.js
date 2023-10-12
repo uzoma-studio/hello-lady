@@ -129,7 +129,7 @@ const AgentId = () => {
                         <div class="tilting-card-body">
       
                           <div className={`flex-column ${bgGradient}`} cursorPointer={false} shineStrength={0.75}
-                              style={{borderRadius: "20px", width: "350px", height: "500px", cursor: "pointer", }} >
+                              style={{borderRadius: "20px", cursor: "pointer", }} id="MainCard">
                               <div  className="formDetails form-control flex-column flex-column-mobile">
                           
                                       <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
@@ -167,7 +167,7 @@ const AgentId = () => {
                                           <div style={{paddingTop: "10px"}}>
                                               <ul style={{margin: "0px"}}>
                                                   <li>
-                                                      <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px",  width: "30%"  }}>
+                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5,  width: "30%"  }}>
                                                           ISSUED TO   
                                                       </label>
                                                       <input type="text" 
@@ -178,7 +178,7 @@ const AgentId = () => {
                                                       style={{ width: "calc(65% - var(--form-padding)" }}/>
                                                   </li>
                                                   <li>
-                                                      <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px", width: "30%" }}>
+                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, width: "30%" }}>
                                                           CODENAME
                                                       </label>
                                                       <input type="text" 
@@ -188,7 +188,7 @@ const AgentId = () => {
                                                       className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }}/>
                                                   </li>
                                                   <li>
-                                                      <label htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, fontSize: "16px",  width: "30%"  }}>
+                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5,  width: "30%"  }}>
                                                           PLACE OF ISSUE
                                                       </label>
                                                       <input type="text" 
@@ -210,10 +210,10 @@ const AgentId = () => {
                                           </label>
                                       </div>
                                       <div className="labelDiv" >
-                                          <label className="Cardlabeldata" style={{ fontSize: "30px", paddingLeft: "10px"}}>
+                                          <label className="Cardlabeldata" style={{ paddingLeft: "10px"}}>
                                               PAN AFRICAN <br/> ROCKSTAR ID
                                           </label>
-                                          <label className="Cardlabeldata" style={{ fontSize: "20px", paddingRight: "10px"}}>
+                                          <label className="Cardlabeldata" style={{ fontSize: "2vw", paddingRight: "10px"}}>
                                           AGENT
                                           </label>
                                       </div>

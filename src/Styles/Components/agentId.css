@@ -62,7 +62,7 @@ form label#file-label {
     border: 1px var(--black) dashed;
     border-radius: var(--border-radius);
     margin: 0 auto;
-    height: 150px;
+    height: 15vw;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer;
     width: 200px;
@@ -116,7 +116,7 @@ form label#file-label:hover {
 }
 
 #share-id .downloadImage {
-    width: 300px;
+    height: 250px !important;
 }
 
 #share-id ol li {
@@ -185,7 +185,7 @@ h3.form-title {
         position: relative;
         margin-left: unset;
         align-self: unset;
-        margin-top: 2.5rem;
+        margin-top: 1.5rem;
         background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(20px);
     }
@@ -221,6 +221,10 @@ h3.form-title {
         font-size: unset;
     }
 
+    form label#file-label{
+        height: 35vw;
+    }
+
     .next-step-btn {
         width: unset;
         margin-left: unset;
@@ -240,6 +244,26 @@ h3.form-title {
     .sharePadding {
         padding: 0px 10px 0px 10px !important;
       }
+
+      .tilting-card-wrapper,  .tilting-card-body #MainCard {
+        width: 250px !important;
+        height: 400px !important ;
+      }
+
+      .cardLabel {
+        font-size: 2.6vw !important;
+      }
+
+      .Cardlabeldata {
+        font-size: 5vw !important;
+      }
+
+      .card-item__logo {
+        height: 15vw !important;
+    }
+    .card-item__chip {
+        height: 7vw !important; 
+    }
 }
 
 
@@ -247,15 +271,17 @@ h3.form-title {
 
 
 
-
+.cardLabel {
+    font-size: 1.6vw ;
+}
 
 .card-item__logo{
-    height: 100px;
+    height: 10vw;
 }
 
 
 .card-item__chip {
-    height: 50px; 
+    height: 5vw; 
     padding-left: 20px;
 }
 
@@ -289,6 +315,7 @@ h3.form-title {
 .Cardlabeldata {
     color: white;
     opacity: 1;
+    font-size: 3vw;
 }
 
 .Cardlabeldata1 {
@@ -346,6 +373,11 @@ h3.form-title {
     text-align: center;
   }
   
+  .tilting-card-body #MainCard {
+    width: 350px;
+    height: 500px;
+  }
+
   .mouse-position-tracker {
     position: absolute;
     width: calc(100% / 3);
@@ -383,6 +415,7 @@ h3.form-title {
     height: 500px;
     aspect-ratio: 1 / 2;
   }
+
   
   .tilting-card-body {
     position: absolute;
