@@ -42,10 +42,9 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
 
         return (
             <div className="flex-row center flex-column-mobile" style={{justifyContent: 'space-around'}}>
-                {isMobile && <p className='white-text vcr-text font-size-m' style={{marginBottom: "10px" }}>Welcome To The Club</p> }
                 {/* <img src={idImage} alt="generated agent id" />  */}
                
-                <div class="tilting-card-wrapper"  style={{width: "300px", height: "450px"}}>
+                <div class="tilting-card-wrapper downloadImage">
                     <div class="mouse-position-tracker"></div>
                     <div class="mouse-position-tracker"></div>
                     <div class="mouse-position-tracker"></div>
@@ -60,10 +59,11 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                     </div>
                 </div>
                 
+                {isMobile && <p className='white-text vcr-text font-size-m' style={{marginBottom: "0px", marginTop: "10px"}}>Welcome To The Club</p> }
                 <div className="step-1-text">
                     {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
                     { isMobile ? 
-                    <p className="white-text vcr-text font-size-xs" style={{fontSize: "16px", paddingLeft: "10px", paddingRight: "10px", marginTop: "0px"}}>
+                    <p className="white-text vcr-text font-size-xs" style={{fontSize: "16px", paddingLeft: "10px", paddingRight: "10px"}}>
                         Download your ID onto your device using the download button or save by long pressing and then 'Add to Photos'
                     </p>
                       :
