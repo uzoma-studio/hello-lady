@@ -167,7 +167,7 @@ const AgentId = () => {
                                           <div style={{paddingTop: "10px"}}>
                                               <ul style={{margin: "0px"}}>
                                                   <li>
-                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5,  width: "30%"  }}>
+                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5,  width: "25%"  }}>
                                                           ISSUED TO   
                                                       </label>
                                                       <input type="text" 
@@ -175,27 +175,27 @@ const AgentId = () => {
                                                       id="name" 
                                                       name="name" 
                                                       ref={nameRef}
-                                                      style={{ width: "60%" }}/>
+                                                      style={{ width: "55%" }}/>
                                                   </li>
                                                   <li>
-                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, width: "30%" }}>
+                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, width: "25%" }}>
                                                           CODENAME
                                                       </label>
                                                       <input type="text" 
                                                       id="codename"
                                                       name="codename"
                                                       ref={codeNameRef}
-                                                      className="formInputs" style={{ width: "60%" }}/>
+                                                      className="formInputs" style={{ width: "55%" }}/>
                                                   </li>
                                                   <li>
-                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5,  width: "30%"  }}>
+                                                      <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5,  width: "25%"  }}>
                                                           PLACE OF ISSUE
                                                       </label>
                                                       <input type="text" 
                                                       id="place-of-issue"
                                                       name="place-of-issue"
                                                       ref={placeOfIssueRef}
-                                                      className="formInputs"  style={{ width: "60%" }}/>
+                                                      className="formInputs"  style={{ width: "55%" }}/>
                                                   </li>
                                               </ul>
                                           </div>
