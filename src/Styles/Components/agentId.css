@@ -178,12 +178,17 @@ h3.form-title {
     }
 
     #bg-selector {
+        margin: 0px;
         margin-right: unset;
         transform: unset;
         display: flex;
         width: 50%;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    #bg-selector li {
+      margin: 5px 0 !important; 
     }
 
     #get-id-btn {
@@ -491,7 +496,7 @@ h3.form-title {
     }
 
     form label#file-label {
-      height: 16vh;
+      height: 19vh;
     }
 
     .blur-button {
@@ -501,5 +506,9 @@ h3.form-title {
     
     .cardLabel {
       font-size: 0.5rem !important;
+    }
+
+    form ul li {
+      margin: 0px 0;
     }
   }

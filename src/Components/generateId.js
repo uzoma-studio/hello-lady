@@ -175,7 +175,7 @@ const AgentId = () => {
                                                       id="name" 
                                                       name="name" 
                                                       ref={nameRef}
-                                                      style={{ width: "calc(65% - var(--form-padding)" }}/>
+                                                      style={{ width: "60%" }}/>
                                                   </li>
                                                   <li>
                                                       <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5, width: "30%" }}>
@@ -185,7 +185,7 @@ const AgentId = () => {
                                                       id="codename"
                                                       name="codename"
                                                       ref={codeNameRef}
-                                                      className="formInputs" style={{ width: "calc(65% - var(--form-padding)" }}/>
+                                                      className="formInputs" style={{ width: "60%" }}/>
                                                   </li>
                                                   <li>
                                                       <label className="cardLabel" htmlFor="name" style={{color: "white", paddingLeft: "10px", opacity: 0.5,  width: "30%"  }}>
@@ -195,7 +195,7 @@ const AgentId = () => {
                                                       id="place-of-issue"
                                                       name="place-of-issue"
                                                       ref={placeOfIssueRef}
-                                                      className="formInputs"  style={{ width: "calc(65% - var(--form-padding)" }}/>
+                                                      className="formInputs"  style={{ width: "60%" }}/>
                                                   </li>
                                               </ul>
                                           </div>
