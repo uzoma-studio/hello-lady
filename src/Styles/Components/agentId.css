@@ -485,7 +485,7 @@ h3.form-title {
 
   @media (max-width: 768px) {
     .tilting-card-body {
-      --angle: 1deg !important; /* Adjust the angle as needed for a milder effect */
+      --angle: 3deg !important; /* Adjust the angle as needed for a milder effect */
     }
   }
 
