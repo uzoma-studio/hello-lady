@@ -25,15 +25,13 @@ const AudioControl = ({ audio }) => {
                     <img
                     src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527965/PAR/giphy_uwda4y.gif"
                     alt="Unmute"
-                    width="70"
-                    height="70"
+                    style={{width: "70px", height: "70px"}}
                     />
                 ) : (
                     <img
                     src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527706/PAR/sound-Off_eedft4.png"
                     alt="Mute"
-                    width="70"
-                    height="70"
+                   style={{width: "70px", height: "70px"}}
                     />
                 )}
 
