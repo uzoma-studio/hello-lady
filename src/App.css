@@ -44,6 +44,7 @@ body {
     background-image: url('../public/Images/img_startpage.jpg');
     background-size: cover;
     backdrop-filter: brightness(50%);
+    height: 100vh;
 }
 
 * {
@@ -137,6 +138,7 @@ li {
 
     body {
         text-align: center;
+        height: 100vh;
     }
 
     .is-desktop {

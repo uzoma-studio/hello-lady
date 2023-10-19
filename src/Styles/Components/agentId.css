@@ -172,11 +172,7 @@ h3.form-title {
 
 @media screen and (max-width: 768px) {
 
-   .mouse-position-tracker{
-      visibility: hidden !important;
-      display: none;
-    }
-
+   
     #bg-selector {
         margin: 0px;
         margin-right: unset;
@@ -224,7 +220,14 @@ h3.form-title {
     }
 
     .step-1-text {
-        margin-left: 0
+        margin-left: 0;
+        padding: 0px 30px
+    }
+
+    .white-hr {
+      border: 1px solid #fff; /* Set the color to white (#fff) */
+      width: 90%;
+      margin: 20px 0px;
     }
 
     form label {
@@ -242,6 +245,10 @@ h3.form-title {
         justify-content: center;
         width: 100%;
         padding: 0 !important
+    }
+
+    .confirmMailbox{
+      padding: 0px 50px;
     }
 
     #email-form {
@@ -264,7 +271,7 @@ h3.form-title {
 
 
 .cardLabel {
-    font-size: 1.2rem ;
+    font-size: 1.0rem ;
 }
 
 .card-item__logo{
@@ -478,7 +485,7 @@ h3.form-title {
 
   @media (max-width: 768px) {
     .tilting-card-body {
-      --angle: 0deg !important; /* Adjust the angle as needed for a milder effect */
+      --angle: 1deg !important; /* Adjust the angle as needed for a milder effect */
     }
   }
 

@@ -33,8 +33,7 @@
   
   
   .page-content {
-    position: relative;
-    z-index: 1;
+    position: absolute;
   }
 
   .centered-image {

@@ -59,11 +59,11 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                     </div>
                 </div>
                 
-                {isMobile && <p className='white-text vcr-text font-size-m' style={{marginBottom: "0px", marginTop: "10px"}}>Welcome To The Club</p> }
+                {isMobile && <p className='white-text vcr-text font-size-xs' style={{marginBottom: "0px", marginTop: "10px"}}>Welcome To The Club</p> }
                 <div className="step-1-text">
                     {!isMobile && <p className='white-text vcr-text font-size-m'>Welcome To The Club</p> }
                     { isMobile ? 
-                    <p className="white-text vcr-text font-size-xs" style={{fontSize: "16px", paddingLeft: "10px", paddingRight: "10px"}}>
+                    <p className="white-text vcr-text " style={{fontSize: "13px", paddingLeft: "10px", paddingRight: "10px"}}>
                         Download your ID onto your device using the download button or save by long pressing and then 'Add to Photos'
                     </p>
                       :
@@ -74,20 +74,21 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                     
                     <>
                         <a style={{paddingRight: "10px" }} href={downloadLinkData.href} download={downloadLinkData.download}>
-                            <button className="button-default" style={{fontSize: "14px" }} onClick={() => {setStepCount(stepCount + 1)}}>
+                            <button className="button-default" style={{fontSize: "12px" }} onClick={() => {setStepCount(stepCount + 1)}}>
                                 Download your ID
                             </button>
                         </a>
                         <Link to="/">
                             <button
-                                style={{fontSize: "14px" }}
+                                style={{fontSize: "12px" }}
                                 className="blur-button">
                                 BACK TO ID
                             </button>
                         </Link>
-                      </>
+                     </>
                     
                 </div>
+                <hr class="white-hr"/>
             </div>
         )
     }
@@ -155,10 +156,9 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 {/* Spotify embed link */}
                 {/* Apple Music embed link */}
                 <ul className="step2-share-links">
-                    <li><a  className="white-text" target="_blank" href="https://open.spotify.com/album/2kA7NTDqESZM0B7COf3cfh?si=Hwn5QwLVT3mNMlJF4cTDzg">Listen on Spotify</a></li>
-                    <li><a  className="white-text" target="_blank" href="https://music.apple.com/ng/album/pan-african-rockstar/1698225328">Listen on Apple Music</a></li>
+                    <li style={{ margin: "15px" }}><a  className="white-text" target="_blank" href="https://open.spotify.com/album/2kA7NTDqESZM0B7COf3cfh?si=Hwn5QwLVT3mNMlJF4cTDzg">Listen on <br/> Spotify</a></li>
+                    <li style={{ margin: "15px" }}><a  className="white-text" target="_blank" href="https://music.apple.com/ng/album/pan-african-rockstar/1698225328">Listen on <br/> Apple Music</a></li>
                 </ul>
-                
             </div>
         )
     }
@@ -191,7 +191,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
             </div>
         :   
         <div className="ConfirmEmail flex-column email-form-container">
-            <div>
+            <div className='confirmMailbox'>
                 <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
                 <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
             </div>
