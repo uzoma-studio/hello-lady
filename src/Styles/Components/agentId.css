@@ -205,112 +205,18 @@ h3.form-title {
   font-size: var(--font-size-xs);
 }
 
-@media screen and (max-width: 768px) {
-
-
-  #bg-selector {
-    margin: 0px;
-    margin-right: unset;
-    transform: unset;
-    display: flex;
-    width: 50%;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  #bg-selector li {
-    margin: 5px 0 !important;
-  }
-
-  #get-id-btn {
-    position: relative;
-    margin-left: unset;
-    align-self: unset;
-    margin-top: 5px;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(20px);
-  }
-
-  #share-id-container {
-    height: 100%
-  }
-
-  #share-id-container img {
-    width: 350px;
-  }
-
-  .form-control {
-    justify-content: unset;
-    height: unset;
-
-  }
-
-  h3.form-title {
-    font-size: unset;
-  }
-
-  form input {
-    outline: none;
-    border-radius: 0;
-  }
-
-  .step-1-text {
-    margin-left: 0;
-    padding: 0px 30px
-  }
-
-  .white-hr {
-    border: 1px solid #fff;
-    /* Set the color to white (#fff) */
-    width: 90%;
-    margin: 20px 0px;
-  }
-
-  form label {
-    font-size: unset;
-  }
-
-  .next-step-btn {
-    width: unset;
-    margin-left: unset;
-  }
-
-  .email-form-container {
-    height: 100vh;
-    justify-content: center;
-    width: 100%;
-    padding: 0 !important
-  }
-
-  .confirmMailbox {
-    padding: 0px 50px;
-  }
-
-  #email-form {
-    padding: 0px 40px 0px 40px;
-  }
-
-  .sharePadding {
-    padding: 0px 10px 0px 10px !important;
-  }
-
-  .tilting-card-wrapper,
-  .tilting-card-body #MainCard {
-    width: 250px !important;
-    height: 400px !important;
-  }
-}
-
 .cardLabel {
   font-size: 1.0rem;
 }
 
 .card-item__logo {
   height: 10vh;
+  padding-left: 10px;
 }
 
 .card-item__chip {
   height: 5vh;
+  padding-right: 10px;
 }
 
 .formDetails {
@@ -319,10 +225,6 @@ h3.form-title {
   align-items: center;
   justify-content: space-around;
   z-index: 1000;
-}
-
-.certified-label label {
-  font-size: 3vw;
 }
 
 .parallax-card-layers {
@@ -516,9 +418,105 @@ h3.form-title {
     0px 37px 80px rgba(0, 0, 0, 0.07);
 }
 
+@media screen and (max-width: 768px) {
 
 
-@media (max-width: 768px) {
+  #bg-selector {
+    margin: 0px;
+    margin-right: unset;
+    transform: unset;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #bg-selector li {
+    margin: 5px 0 !important;
+  }
+
+  #get-id-btn {
+    position: relative;
+    margin-left: unset;
+    align-self: unset;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+  }
+
+  #share-id-container {
+    height: 100%
+  }
+
+  #share-id-container img {
+    width: 350px;
+  }
+
+  .form-control {
+    justify-content: unset;
+    height: unset;
+
+  }
+
+  h3.form-title {
+    font-size: unset;
+  }
+
+  form input {
+    outline: none;
+    border-radius: 0;
+  }
+
+  .step-1-text {
+    margin-left: 0;
+    padding: 0px 30px
+  }
+
+  .white-hr {
+    border: 1px solid #fff;
+    /* Set the color to white (#fff) */
+    width: 90%;
+    margin: 20px 0px;
+  }
+
+  form label {
+    font-size: unset;
+  }
+
+  .next-step-btn {
+    width: unset;
+    margin-left: unset;
+  }
+
+  .email-form-container {
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+    padding: 0 !important
+  }
+
+  .confirmMailbox {
+    padding: 0px 50px;
+  }
+
+  #email-form {
+    padding: 0px 40px 0px 40px;
+  }
+
+  .sharePadding {
+    padding: 0px 10px 0px 10px !important;
+  }
+
+  .tilting-card-wrapper,
+  .tilting-card-body #MainCard {
+    width: 250px !important;
+    height: 400px !important;
+  }
+
+  .certified-label label {
+    font-size: 3vw;
+  }
+
   .tilting-card-body {
     --angle: 0deg !important;
     /* Adjust the angle as needed for a milder effect */
@@ -526,11 +524,9 @@ h3.form-title {
 }
 
 
-
 @media (max-width: 820px) {
   .card-item__chip {
     height: 4vh;
-    padding-right: 10px;
   }
 
   .card-item__logo {
