@@ -156,8 +156,8 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                 {/* Spotify embed link */}
                 {/* Apple Music embed link */}
                 <ul className="step2-share-links">
-                    <li style={{ margin: "15px" }}><a  className="white-text" target="_blank" href="https://open.spotify.com/album/2kA7NTDqESZM0B7COf3cfh?si=Hwn5QwLVT3mNMlJF4cTDzg">Listen on <br/> Spotify</a></li>
-                    <li style={{ margin: "15px" }}><a  className="white-text" target="_blank" href="https://music.apple.com/ng/album/pan-african-rockstar/1698225328">Listen on <br/> Apple Music</a></li>
+                    <li style={{ margin: "15px" }}><a  className="white-text" target="_blank" rel="noreferrer" href="https://open.spotify.com/album/2kA7NTDqESZM0B7COf3cfh?si=Hwn5QwLVT3mNMlJF4cTDzg">Listen on <br/> Spotify</a></li>
+                    <li style={{ margin: "15px" }}><a  className="white-text" target="_blank" rel="noreferrer" href="https://music.apple.com/ng/album/pan-african-rockstar/1698225328">Listen on <br/> Apple Music</a></li>
                 </ul>
             </div>
         )
@@ -192,8 +192,8 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
         :   
         <div className="ConfirmEmail flex-column email-form-container">
             <div className='confirmMailbox'>
-                <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS AGENT</h3>
-                <p className="white-text font-size-xs vcr-text">We need to be able to occassionally brief you on top secret missions</p>
+                <h3 className="text-center white-text vcr-text">PLEASE ENTER YOUR EMAIL ADDRESS</h3>
+                <p className="white-text font-size-xs vcr-text">To receive news on the latest and greatest from the club</p>
             </div>
             <form id="email-form" onSubmit={(event) => handleSubmit(event)}>
                 <p>
