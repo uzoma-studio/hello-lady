@@ -1,15 +1,17 @@
 .topHeader{
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding-top: 7px;
     top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 .topHeader div ul {
     padding-right: 10px;
-    z-index: 9999;
 }
 
 .topHeader div ul a {
