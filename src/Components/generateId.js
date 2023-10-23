@@ -161,10 +161,10 @@ const AgentId = () => {
 
                           </div>
 
-                          <div style={{ paddingTop: "25px" }}>
+                          <div style={{ paddingTop: "15px" }}>
                             <ul style={{ margin: "0px" }}>
                               <li>
-                                <label className="cardLabel" htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, width: "25%" }}>
+                                <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
                                   ISSUED TO
                                 </label>
                                 <input type="text"
@@ -175,7 +175,7 @@ const AgentId = () => {
                                   />
                               </li>
                               <li>
-                                <label className="cardLabel" htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, width: "25%" }}>
+                                <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
                                   CODENAME
                                 </label>
                                 <input type="text"
@@ -185,7 +185,7 @@ const AgentId = () => {
                                   className="formInputs" />
                               </li>
                               <li>
-                                <label className="cardLabel" htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, width: "25%" }}>
+                                <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
                                   PLACE OF ISSUE
                                 </label>
                                 <input type="text"
