@@ -33,7 +33,7 @@
   
   
   .page-content {
-    position: absolute;
+    position: fixed !important;
   }
 
   .centered-image {
