@@ -21,7 +21,12 @@ const AudioControl = ({ audio }) => {
         <div className='bottomHeader pageHeader'>
             <div style={{ zIndex: "50" }}>
                 <button className='blur-button'>
-                    <a href='#' className="vcr-text" style={{ color: 'var(--white)' }}>PARC Shop</a>
+                    <a href='https://sites.google.com/view/panafricanrockstar/par' 
+                        target='_blank' rel='noopener noreferrer'
+                        className="vcr-text" style={{ color: 'var(--white)' }}
+                    >
+                        PARC Shop
+                    </a>
                 </button>
             </div>
             <button className="sound-toggle-button" onClick={() => toggleAudio()}>
