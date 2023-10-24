@@ -88,7 +88,14 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                      </>
                     
                 </div>
-                <hr class="white-hr"/>
+
+                { isMobile ? 
+                   <hr class="white-hr "/>
+                    :
+                    <></>
+                 }
+                    
+               
             </div>
         )
     }
