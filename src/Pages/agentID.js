@@ -7,9 +7,11 @@ const UploadPage = ({ audio }) => {
   return (
     <>
       {/* Page links component */}
-      <HeaderData />
-      <AudioControl audio={audio} />
-      <AgentId />
+      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+        <AudioControl audio={audio} />
+        <AgentId />
+        <HeaderData />
+      </div>
     </>
   )
 }

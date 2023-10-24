@@ -523,12 +523,6 @@ h3.form-title {
     height: 4vh;
   }
 
-  .card-item__logo {
-    height: 5vh;
-    padding-bottom: 5px;
-    padding-left: 20px;
-  }
-
   form label#file-label {
     height: 19vh;
   }

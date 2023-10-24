@@ -132,7 +132,7 @@ const AgentId = () => {
                       style={{ borderRadius: "20px", cursor: "pointer", }} id="MainCard">
                       <div className="formDetails form-control flex-column flex-column-mobile">
 
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: 'center', width: "100%" }}>
+                        <div style={{ display: "flex", justifyContent: "center", alignItems: 'center', width: "100%" }}>
                           <img src={badge}
                             className="card-item__logo"
                             alt="PAR card logo" />

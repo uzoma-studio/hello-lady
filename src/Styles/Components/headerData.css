@@ -1,19 +1,20 @@
-.topHeader{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    padding-top: 7px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
 .topHeader div ul {
     padding-right: 10px;
 }
 
-.topHeader div ul a {
-   text-decoration: none !important;
+.topHeader span {
+    margin-left: 10px;
+}
+
+.pageHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 40px);
+    z-index: 100;
+    padding: 20px;
+}
+
+.topHeader {
+    justify-content: center;
 }

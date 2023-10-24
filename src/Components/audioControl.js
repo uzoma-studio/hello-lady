@@ -18,8 +18,12 @@ const AudioControl = ({ audio }) => {
     const audioText = isAudioPlaying ? "Pause" : "Play"
 
     return (
-        <div className='bottomHeader'>
-            <span className="vcr-text text-center " style={{ color: 'var(--white)', zIndex: "50" }}>LADY DONLI</span>
+        <div className='bottomHeader pageHeader'>
+            <div style={{ zIndex: "50" }}>
+                <button className='blur-button'>
+                    <a href='#' className="vcr-text" style={{ color: 'var(--white)' }}>PARC Shop</a>
+                </button>
+            </div>
             <button className="sound-toggle-button" onClick={() => toggleAudio()}>
                 {isAudioPlaying ? (
                     <img
