@@ -8,6 +8,9 @@
     #video-container {
         width: 100%
     }
+    .page-content {
+      position: fixed !important;
+    }
 }
 
 
@@ -33,7 +36,7 @@
   
   
   .page-content {
-    position: fixed !important;
+    position: absolute;
   }
 
   .centered-image {
