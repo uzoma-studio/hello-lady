@@ -47,7 +47,7 @@ form input {
 }
 
 form ul li input {
-  width: 65%;
+  width: 100%;
 }
 
 form input:focus {
@@ -207,6 +207,7 @@ h3.form-title {
 
 .cardLabel {
   font-size: 1.0rem;
+  width: 50%;
 }
 
 .card-item__logo {
@@ -232,9 +233,9 @@ h3.form-title {
 }
 
 .formInputs {
-  opacity: 0.5;
+  opacity: 0.4;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   left: 30px;
 }
 
@@ -510,7 +511,7 @@ h3.form-title {
   .tilting-card-wrapper,
   .tilting-card-body #MainCard {
     width: 250px !important;
-    height: 400px !important;
+    height: auto !important;
   }
 
   .certified-label label {
@@ -536,7 +537,7 @@ h3.form-title {
   }
 
   form label#file-label {
-    height: 19vh;
+    height: 17vh;
   }
 
   .blur-button {
@@ -545,11 +546,17 @@ h3.form-title {
   }
 
   .cardLabel {
-    font-size: 0.7rem !important;
+    font-size: 0.5rem !important;
+    width: 50%;
   }
 
   form ul li {
     margin: 0px 0;
     align-items: center;
+  }
+
+  .mouse-position-tracker {
+    visibility: hidden;
+    display: none;
   }
 }
