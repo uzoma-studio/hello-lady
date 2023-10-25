@@ -173,6 +173,7 @@ const AgentId = () => {
                                          className="formInputs"
                                          id="name"
                                          name="name"
+                                         style={{borderBottom: "2px dotted rgba(255, 255, 255, 0.5"}}
                                          ref={nameRef}
                                          />
                                      </li>
@@ -183,6 +184,7 @@ const AgentId = () => {
                                        <input type="text"
                                          id="codename"
                                          name="codename"
+                                         style={{borderBottom: "2px dotted rgba(255, 255, 255, 0.5"}}
                                          ref={codeNameRef}
                                          className="formInputs" />
                                      </li>
@@ -193,6 +195,7 @@ const AgentId = () => {
                                        <input type="text"
                                          id="place-of-issue"
                                          name="place-of-issue"
+                                         style={{borderBottom: "2px dotted rgba(255, 255, 255, 0.5"}}
                                          ref={placeOfIssueRef}
                                          className="formInputs" />
                                      </li>
