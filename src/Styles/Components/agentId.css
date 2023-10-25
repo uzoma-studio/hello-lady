@@ -38,7 +38,9 @@ form label {
 }
 
 form input {
-  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-bottom: 2px dotted rgba(255, 255, 255, 0.5);
   color: var(--white);
   font-size: var(--font-size-xs);
