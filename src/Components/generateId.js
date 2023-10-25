@@ -132,7 +132,7 @@ const AgentId = () => {
                       style={{ borderRadius: "20px", cursor: "pointer", }} id="MainCard">
                       <div className="formDetails form-control flex-column flex-column-mobile">
 
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: 'center', width: "100%" }}>
+                        <div style={{ display: "flex", justifyContent: "center", alignItems: 'center', width: "100%" }}>
                           <img src={badge}
                             className="card-item__logo"
                             alt="PAR card logo" />
@@ -161,10 +161,10 @@ const AgentId = () => {
 
                           </div>
 
-                          <div style={{ paddingTop: "25px" }}>
+                          <div style={{ paddingTop: "15px" }}>
                             <ul style={{ margin: "0px" }}>
                               <li>
-                                <label className="cardLabel" htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, width: "25%" }}>
+                                <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
                                   ISSUED TO
                                 </label>
                                 <input type="text"
@@ -175,7 +175,7 @@ const AgentId = () => {
                                   />
                               </li>
                               <li>
-                                <label className="cardLabel" htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, width: "25%" }}>
+                                <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
                                   CODENAME
                                 </label>
                                 <input type="text"
@@ -185,7 +185,7 @@ const AgentId = () => {
                                   className="formInputs" />
                               </li>
                               <li>
-                                <label className="cardLabel" htmlFor="name" style={{ color: "white", paddingLeft: "10px", opacity: 0.5, width: "25%" }}>
+                                <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
                                   PLACE OF ISSUE
                                 </label>
                                 <input type="text"

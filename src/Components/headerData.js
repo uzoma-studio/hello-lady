@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../Styles/pages.css';
 import '../Styles/Components/headerData.css'
 import badge from '../Images/badge.png'
@@ -8,13 +8,9 @@ const AudioControl = ({ audio }) => {
 
     return (
 
-        <div className='topHeader'>
+        <div className='topHeader pageHeader'>
             <img src={badge} alt="Pan-African Rockstar badge" style={{ width: '84px', zIndex: "50" }} />
-            <div style={{ zIndex: "50" }}>
-                <ul>
-                    <li><a href='#' className="vcr-text" style={{ color: 'var(--white)' }}>Shop</a></li>
-                </ul>
-            </div>
+            <span className="vcr-text text-center " style={{ color: 'var(--white)', zIndex: "50" }}>LADY DONLI &copy; {new Date().getFullYear()}</span>
         </div>
     )
 }
