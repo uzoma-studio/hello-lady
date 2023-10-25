@@ -530,7 +530,7 @@ h3.form-title {
   }
 
   form label#file-label {
-    height: 25vh;
+    height: 150px;
   }
 
   .blur-button {

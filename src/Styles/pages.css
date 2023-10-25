@@ -56,6 +56,9 @@ button:hover {
         flex-direction: column;
         width: 100%;
     }
+    .page-content {
+        height: 100%;
+    }
 }
 
 
