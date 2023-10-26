@@ -165,6 +165,9 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
                     <li style={{ margin: "15px" }}><a className="white-text" target="_blank" rel="noreferrer" href="https://open.spotify.com/album/2kA7NTDqESZM0B7COf3cfh?si=Hwn5QwLVT3mNMlJF4cTDzg">Listen on <br /> Spotify</a></li>
                     <li style={{ margin: "15px" }}><a className="white-text" target="_blank" rel="noreferrer" href="https://music.apple.com/ng/album/pan-african-rockstar/1698225328">Listen on <br /> Apple Music</a></li>
                 </ul>
+                <p className='white-text text-center' style={{margin: '1.5rem 0', fontSize: '15px'}}>
+                    Site made by <a href="https://uzoma.studio" target='_blank' rel='noopener noreferrer' className='white-text studio-link'>uzoma.studio</a>
+                </p>
             </div>
         )
     }

@@ -288,6 +288,10 @@ h3.form-title {
   padding: 0px 180px 0px 180px;
 }
 
+.studio-link:hover {
+  font-weight: bold;
+}
+
 .formImage {
   position: absolute;
   z-index: 100;
