@@ -15,8 +15,6 @@ const AudioControl = ({ audio }) => {
         }
     }
 
-    const audioText = isAudioPlaying ? "Pause" : "Play"
-
     return (
         <div className='bottomHeader pageHeader'>
             <div style={{ zIndex: "50" }}>
