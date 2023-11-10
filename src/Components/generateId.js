@@ -106,19 +106,20 @@ const AgentId = () => {
 
     // use isCheckingCity to ensure function is only run once
     if(!isCheckingCity){
-      console.log('in here')
       setIsCheckingCity(true)
 
       setTimeout(() => {
         if(e.target.value) {
           setIsCheckingCity(false)
           const cityList = cities.filter(({ name }) => name.toLowerCase().includes(e.target.value.toLowerCase()))
-          console.log(cityList)
-          // setAutocompleteCities(cityList)
+          setAutocompleteCities(cityList)
         }
       }, 5000);
     }
   }
+
+  console.log('rendering component...')
+  console.log(autocompleteCities)
 
   return (
     <>
@@ -349,18 +350,23 @@ const AgentId = () => {
                                     value={city}
                                     onChange={handleCityChange}
                                   />
-                                  { placeOfIssueRef.current && placeOfIssueRef.current.value &&
+                                  {/* { placeOfIssueRef.current && placeOfIssueRef.current.value &&
                                     <select id="cities">
                                       { isCheckingCity ?
                                           <option>SCANNING THE GLOBE...</option>
                                           :
-                                          autocompleteCities.map(({ name, country }, i) => {
+                                          autocompleteCities && autocompleteCities.map(({ name, country }, i) => {
                                             const location = `${name}, ${country}`
                                             return <option key={i} onClick={setCity(location)}>{location}</option>
                                           })
                                       }
                                     </select>
-                                  }
+                                  } */}
+                                  <datalist id="cities">
+                                    {autocompleteCities.map(({ name, country }, i) => (
+                                      <option key={i} className='city-option'>{`${name}, ${country}`}</option>
+                                    ))}
+                                  </datalist>
                                 </li>
                               </ul>
                             </div>
