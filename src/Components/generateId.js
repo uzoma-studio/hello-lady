@@ -118,8 +118,27 @@ const AgentId = () => {
     }
   }
 
-  console.log('rendering component...')
-  console.log(autocompleteCities)
+  const cityOfIssue = <>
+    <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
+      CITY OF ISSUE
+    </label>
+    <input type="text"
+      list="cities"
+      id="place-of-issue"
+      name="place-of-issue"
+      style={{ borderBottom: "2px dotted rgba(255, 255, 255, 0.5" }}
+      ref={placeOfIssueRef}
+      className="formInputs"
+      value={city}
+      onChange={handleCityChange}
+    />
+    {placeOfIssueRef.current && placeOfIssueRef.current.value && isCheckingCity && <p className="white-text">SCANNING THE GLOBE...</p>}
+    <datalist id="cities">
+      {autocompleteCities.map(({ name, country }, i) => (
+        <option key={i}>{`${name}, ${country}`}</option>
+      ))}
+    </datalist>
+  </>
 
   return (
     <>
@@ -216,30 +235,7 @@ const AgentId = () => {
                                     className="formInputs" />
                                 </li>
                                 <li>
-                                  <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
-                                    CITY OF ISSUE
-                                  </label>
-                                  {/* <div style={{display: 'flex'}}>
-                                    <input type="text"
-                                      list="cities"
-                                      id="place-of-issue"
-                                      name="place-of-issue"
-                                      style={{ borderBottom: "2px dotted rgba(255, 255, 255, 0.5" }}
-                                      ref={placeOfIssueRef}
-                                      onChange={handleCityChange}
-                                      className="formInputs" 
-                                    />
-                                    <button>Search</button>
-                                  </div> */}
-                                  {/* <datalist id="cities">
-                                    {isCheckingCity ?
-                                        <option>CHECKING THE GLOBE...</option>
-                                      :
-                                        autocompleteCities.map(({ name, country }, i) => (
-                                          <option key={i}>{`${name}, ${country}`}</option>
-                                        ))
-                                    }
-                                  </datalist> */}
+                                  { cityOfIssue }
                                 </li>
                               </ul>
                             </div>
@@ -337,36 +333,7 @@ const AgentId = () => {
                                     className="formInputs" />
                                 </li>
                                 <li>
-                                  <label className="cardLabel" htmlFor="name" style={{ color: "white", opacity: 0.5 }}>
-                                    CITY OF ISSUE
-                                  </label>
-                                  <input type="text"
-                                    list="cities"
-                                    id="place-of-issue"
-                                    name="place-of-issue"
-                                    style={{ borderBottom: "2px dotted rgba(255, 255, 255, 0.5" }}
-                                    ref={placeOfIssueRef}
-                                    className="formInputs"
-                                    value={city}
-                                    onChange={handleCityChange}
-                                  />
-                                  {/* { placeOfIssueRef.current && placeOfIssueRef.current.value &&
-                                    <select id="cities">
-                                      { isCheckingCity ?
-                                          <option>SCANNING THE GLOBE...</option>
-                                          :
-                                          autocompleteCities && autocompleteCities.map(({ name, country }, i) => {
-                                            const location = `${name}, ${country}`
-                                            return <option key={i} onClick={setCity(location)}>{location}</option>
-                                          })
-                                      }
-                                    </select>
-                                  } */}
-                                  <datalist id="cities">
-                                    {autocompleteCities.map(({ name, country }, i) => (
-                                      <option key={i} className='city-option'>{`${name}, ${country}`}</option>
-                                    ))}
-                                  </datalist>
+                                  { cityOfIssue }
                                 </li>
                               </ul>
                             </div>
