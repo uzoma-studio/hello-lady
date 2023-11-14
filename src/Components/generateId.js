@@ -46,7 +46,9 @@ const AgentId = () => {
       !placeOfIssueRef.current.value
     ) {
       alert("PLEASE FILL IN ALL YOUR DETAILS");
-    } else {
+    } else if (!isCitySelected) {
+      alert("PLEASE SELECT A CITY FROM THE LIST");
+    }else {
 
       setButtonDisabled(true);
 
@@ -99,6 +101,8 @@ const AgentId = () => {
   const [autocompleteCities, setAutocompleteCities] = useState([]);
   const [isCheckingCity, setIsCheckingCity] = useState(false)
   const [city, setCity] = useState("")
+  const [showDropdown, setShowDropdown] = useState(false)
+  const [isCitySelected, setIsCitySelected] = useState(false)
 
   const handleCityChange = (e) => {
 
@@ -107,12 +111,16 @@ const AgentId = () => {
     // use isCheckingCity to ensure function is only run once
     if(!isCheckingCity){
       setIsCheckingCity(true)
+      setShowDropdown(false)
 
       setTimeout(() => {
         if(e.target.value) {
           setIsCheckingCity(false)
           const cityList = cities.filter(({ name }) => name.toLowerCase().includes(e.target.value.toLowerCase()))
           setAutocompleteCities(cityList)
+          // const { name, country } = cityList[0]
+          // setCity(`${name}, ${country}`)
+          setShowDropdown(true)
         }
       }, 5000);
     }
@@ -131,13 +139,26 @@ const AgentId = () => {
       className="formInputs"
       value={city}
       onChange={handleCityChange}
+      onClick={() => { autocompleteCities.length > 0 && setShowDropdown(true) }}
     />
     {placeOfIssueRef.current && placeOfIssueRef.current.value && isCheckingCity && <p className="white-text">SCANNING THE GLOBE...</p>}
-    <datalist id="cities">
-      {autocompleteCities.map(({ name, country }, i) => (
-        <option key={i}>{`${name}, ${country}`}</option>
-      ))}
-    </datalist>
+    {showDropdown && (
+      <select
+        id="cities"
+        onChange={(e) => {
+          setCity(e.target.value);
+          setShowDropdown(false);
+          !isCitySelected && setIsCitySelected(true)
+        }}
+      >
+        <option>City list:</option>
+        {autocompleteCities.map(({ name, country }, i) => (
+          <option key={i} value={`${name}, ${country}`}>
+            {`${name}, ${country}`}
+          </option>
+        ))}
+      </select>
+    )}
   </>
 
   return (
