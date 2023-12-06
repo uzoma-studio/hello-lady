@@ -224,6 +224,7 @@ const AgentId = () => {
                                 <input
                                   type="file"
                                   id="file"
+                                  name="file"
                                   onChange={(event) => handleFileChange(event)}
                                 />
                               </label>
@@ -324,6 +325,7 @@ const AgentId = () => {
                                 <input
                                   type="file"
                                   id="file"
+                                  name="file"
                                   onChange={(event) => handleFileChange(event)}
                                 />
                               </label>
