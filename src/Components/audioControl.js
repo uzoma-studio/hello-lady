@@ -30,13 +30,13 @@ const AudioControl = ({ audio }) => {
             <button className="sound-toggle-button" onClick={() => toggleAudio()}>
                 {isAudioPlaying ? (
                     <img
-                    src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527965/PAR/giphy_uwda4y.gif"
+                    src="https://res.cloudinary.com/ds4krgzbj/image/upload/q_auto,f_auto/v1696527965/PAR/giphy_uwda4y.gif"
                     alt="Unmute"
                     style={{width: "70px", maxHeight: "70px"}}
                     />
                 ) : (
                     <img
-                    src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527706/PAR/sound-Off_eedft4.png"
+                    src="https://res.cloudinary.com/ds4krgzbj/image/upload/q_auto,f_auto/v1696527706/PAR/sound-Off_eedft4.png"
                     alt="Mute"
                    style={{width: "70px", maxHeight: "70px"}}
                     />

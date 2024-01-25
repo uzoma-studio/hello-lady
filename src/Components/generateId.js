@@ -48,7 +48,7 @@ const AgentId = () => {
       alert("PLEASE FILL IN ALL YOUR DETAILS");
     } else if (!isCitySelected) {
       alert("PLEASE SELECT A CITY FROM THE LIST");
-    }else {
+    } else {
 
       setButtonDisabled(true);
 
@@ -109,12 +109,12 @@ const AgentId = () => {
     setCity(e.target.value)
 
     // use isCheckingCity to ensure function is only run once
-    if(!isCheckingCity){
+    if (!isCheckingCity) {
       setIsCheckingCity(true)
       setShowDropdown(false)
 
       setTimeout(() => {
-        if(e.target.value) {
+        if (e.target.value) {
           setIsCheckingCity(false)
           const cityList = cities.filter(({ name }) => name.toLowerCase().includes(e.target.value.toLowerCase()))
           setAutocompleteCities(cityList)
@@ -256,7 +256,7 @@ const AgentId = () => {
                                     className="formInputs" />
                                 </li>
                                 <li>
-                                  { cityOfIssue }
+                                  {cityOfIssue}
                                 </li>
                               </ul>
                             </div>
@@ -354,7 +354,7 @@ const AgentId = () => {
                                     className="formInputs" />
                                 </li>
                                 <li>
-                                  { cityOfIssue }
+                                  {cityOfIssue}
                                 </li>
                               </ul>
                             </div>
