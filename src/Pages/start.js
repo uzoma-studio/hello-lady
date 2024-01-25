@@ -22,7 +22,7 @@ const StartPage = ({ audio }) => {
       setIsMuted(videoRef.current.muted);
     }
   }, []);
-  
+
 
   const playAudio = () => {
     audio.play();
@@ -30,7 +30,7 @@ const StartPage = ({ audio }) => {
 
   return (
     <main className="page-content flex-column space-evenly">
-           <CustomCursor />
+      <CustomCursor />
 
       <div className="video-background">
         <video
@@ -41,26 +41,26 @@ const StartPage = ({ audio }) => {
           className="video-element"
         >
           <source
-            src="https://res.cloudinary.com/ds4krgzbj/video/upload/v1696521695/PAR/Comme_ci_comme_c%CC%A7a_-_Lady_Donli_The_Lagos_Panic_Visualiser_fqyfoz.mp4"
+            src="https://res.cloudinary.com/ds4krgzbj/video/upload/q_auto,f_auto/PAR/PAR_comme_ci_comme_ca_bdss9l.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
-       
+
       </div>
-      
+
       <div className="start-sound">
-      <button onClick={toggleSound} className="sound-toggle-button">
+        <button onClick={toggleSound} className="sound-toggle-button">
           {videoRef.current && !videoRef.current.muted ? (
             <img
-              src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527965/PAR/giphy_uwda4y.gif"
+              src="https://res.cloudinary.com/ds4krgzbj/image/upload/q_auto,f_auto/v1696527965/PAR/giphy_uwda4y.gif"
               alt="Unmute"
               width="70"
               height="70"
             />
           ) : (
             <img
-              src="https://res.cloudinary.com/ds4krgzbj/image/upload/v1696527706/PAR/sound-Off_eedft4.png"
+              src="https://res.cloudinary.com/ds4krgzbj/image/upload/q_auto,f_auto/v1696527706/PAR/sound-Off_eedft4.png"
               alt="Mute"
               width="70"
               height="70"
@@ -71,14 +71,14 @@ const StartPage = ({ audio }) => {
 
 
       <div className="centered-image">
-         <Link to="/id">
-          <img src={badge} alt="Pan-African Rockstar badge" onClick={() => playAudio()} style={{width: '208px'}} /><br/>
-         </Link>
-         <Link to="/id">
-            <button onClick={() => playAudio()} className="blur-button"> 
-                Get Your ID
-            </button>
-          </Link>
+        <Link to="/id">
+          <img src={badge} alt="Pan-African Rockstar badge" onClick={() => playAudio()} style={{ width: '208px' }} /><br />
+        </Link>
+        <Link to="/id">
+          <button onClick={() => playAudio()} className="blur-button" style={{cursor: 'none'}}>
+            Get Your ID
+          </button>
+        </Link>
       </div>
       <div className="page-row buttons">
         {/* <Link to="/id">
@@ -89,7 +89,7 @@ const StartPage = ({ audio }) => {
         <Link to="/">
           <button className="control-button button-reject font-size-l">REJECT</button>
         </Link>*/}
-        
+
       </div>
 
     </main>
