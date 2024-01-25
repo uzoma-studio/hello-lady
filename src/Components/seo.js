@@ -9,14 +9,14 @@ const SEO = () => {
         lang="en"
         openGraph={{
             ogImage: {
-                ogImage: "../../public/Images/hello-lady-bg.jpg",
+                ogImage: "../Images/badge.png",
                 ogImageAlt: "Pan African Rockstar Club ID",
                 ogImageType: "image/jpeg",
             },
         }}
         twitter={{
             twitterSummaryCard: {
-                summaryCardImage: "../../public/Images/hello-lady-bg.jpg",
+                summaryCardImage: "../Images/badge.png",
                 summaryCardImageAlt: "Pan African Rockstar Club ID",
                 summaryCardSiteUsername: "Get your ID and join the Pan-African Rockstar Club",
             },

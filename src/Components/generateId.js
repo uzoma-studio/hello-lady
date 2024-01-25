@@ -53,7 +53,7 @@ const AgentId = () => {
       setButtonDisabled(true);
 
       // set file name before text transform
-      const filename = `${codeNameRef.current.value} agent ID.jpg`;
+      const filename = `${codeNameRef.current.value} PARC ID.jpg`;
 
       transformInputToUppercase(nameRef, codeNameRef, placeOfIssueRef);
 

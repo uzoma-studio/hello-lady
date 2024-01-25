@@ -1,54 +1,60 @@
 #video-container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
 
-    #video-container {
-        width: 100%
-    }
+  #video-container {
+    width: 100%
+  }
 }
 
 
-  .video-background video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover; 
-    cursor: none;
-  }
+.video-background video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  cursor: none;
+}
 
 
-  .start-sound {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin:10px;
-  }
-  
+.start-sound {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+}
 
-  .sound-toggle-button {
-    border: none;
-  }
 
-  
-  
-  /* .page-content {
+.sound-toggle-button {
+  border: none;
+}
+
+
+
+/* .page-content {
     position: absolute;
   } */
 
-  .centered-image {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Add margin as needed */
-  }
-
-.bottom-data{
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 25px;
+.centered-image {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  /* Add margin as needed */
 }
-  
+
+.parc-badge {
+  width: 210px;
+  height: 210px;
+  cursor: none;
+}
+
+.bottom-data {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 25px;
+}

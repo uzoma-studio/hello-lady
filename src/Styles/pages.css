@@ -65,15 +65,15 @@ button:hover {
   
 
   .custom-cursor {
-    cursor: none; /* Hide the default cursor */
-    width: 50px; /* Adjust the width and height as needed */
+    cursor: none;
+    width: 50px;
     height: 50px;
-    pointer-events: none; /* Prevent the cursor from interfering with interactions */
+    pointer-events: none;
     position: fixed;
-    transform: translate(-50%, -50%); /* Center the cursor on the mouse pointer */
-    z-index: 9999; /* Ensure the cursor appears above other elements */
-    background-image: url('https://res.cloudinary.com/ds4krgzbj/image/upload/v1696624482/PAR/cursorPAR_yluzt8.png'); /* Replace with your image path */
-    background-size: cover; /* Scale the image to fit the cursor size */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-image: url('https://res.cloudinary.com/ds4krgzbj/image/upload/q_auto,f_auto/v1696624482/PAR/cursorPAR_yluzt8.png');
+    background-size: cover;
   }
 
   @media only screen and (max-width: 768px) {
