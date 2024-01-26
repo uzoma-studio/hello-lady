@@ -406,6 +406,7 @@ const AgentId = () => {
             name: capitalize(nameRef.current.value),
             codename: capitalize(codeNameRef.current.value),
             "place-of-issue": capitalize(placeOfIssueRef.current.value),
+            "gradient": bgGradient,
           }}
         />
       )}
