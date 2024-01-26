@@ -27,6 +27,12 @@ const StartPage = ({ audio }) => {
     audio.play();
   };
 
+  const showAudioDialog = () => {
+    if(window && window.confirm("Would you like to play audio?")){
+      playAudio()
+    }
+  }
+
   return (
     <main className="page-content flex-column space-evenly">
       <CustomCursor />
@@ -74,7 +80,7 @@ const StartPage = ({ audio }) => {
           <img src='https://res.cloudinary.com/ds4krgzbj/image/upload/q_auto,f_auto/v1706200878/PAR/badge_fzsr1c.png' alt="Pan-African Rockstar badge" className="parc-badge" /><br />
         </Link>
         <Link to="/id">
-          <button onClick={() => playAudio()} className="blur-button" style={{cursor: 'none'}}>
+          <button onClick={() => showAudioDialog()} className="blur-button" style={{cursor: 'none'}}>
             Get Your ID
           </button>
         </Link>
