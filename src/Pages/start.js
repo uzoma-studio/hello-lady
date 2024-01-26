@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import '../Styles/pages.css';
 import '../Styles/Pages/start.css';
 import { Link } from 'react-router-dom';
-import badge from '../Images/badge.png'
 import CustomCursor from '../Components/customCursor';
 
 const StartPage = ({ audio }) => {
@@ -27,6 +26,12 @@ const StartPage = ({ audio }) => {
   const playAudio = () => {
     audio.play();
   };
+
+  const showAudioDialog = () => {
+    if(window && window.confirm("Would you like to play audio?")){
+      playAudio()
+    }
+  }
 
   return (
     <main className="page-content flex-column space-evenly">
@@ -72,26 +77,14 @@ const StartPage = ({ audio }) => {
 
       <div className="centered-image">
         <Link to="/id">
-          <img src={badge} alt="Pan-African Rockstar badge" onClick={() => playAudio()} style={{ width: '208px' }} /><br />
+          <img src='https://res.cloudinary.com/ds4krgzbj/image/upload/q_auto,f_auto/v1706200878/PAR/badge_fzsr1c.png' alt="Pan-African Rockstar badge" className="parc-badge" /><br />
         </Link>
         <Link to="/id">
-          <button onClick={() => playAudio()} className="blur-button" style={{cursor: 'none'}}>
+          <button onClick={() => showAudioDialog()} className="blur-button" style={{cursor: 'none'}}>
             Get Your ID
           </button>
         </Link>
       </div>
-      <div className="page-row buttons">
-        {/* <Link to="/id">
-          <button className="control-button button-accept font-size-l" onClick={() => playAudio()}>
-            ACCEPT
-          </button>
-        </Link>
-        <Link to="/">
-          <button className="control-button button-reject font-size-l">REJECT</button>
-        </Link>*/}
-
-      </div>
-
     </main>
   );
 };

@@ -28,7 +28,7 @@ const ShareId = ({ idImage, downloadLinkData, formDetails }) => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "Agent Details", "email": emailRef.current.value, ...formDetails })
+            body: encode({ "form-name": "Agent Details", "email": emailRef.current.value, "image-data": idImage, ...formDetails })
         })
             .then(() => console.log('Form uploaded successfully'))
             .catch(error => alert(error));
