@@ -46,7 +46,7 @@ const StartPage = ({ audio }) => {
           className="video-element"
         >
           <source
-            src="https://res.cloudinary.com/ds4krgzbj/video/upload/q_auto,f_auto/PAR/PAR_comme_ci_comme_ca_bdss9l.mp4"
+            src="https://res.cloudinary.com/ds4krgzbj/video/upload/q_auto,f_auto/PAR/comme_ci_comme_ca_2_fgoxpj.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
